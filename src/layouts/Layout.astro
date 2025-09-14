@@ -1,0 +1,103 @@
+---
+import "../styles/global.css"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  showFooter?: boolean;
+  postId?: string;
+}
+
+const { title = "2 Samuel Study Group", subtitle, showFooter = true, postId } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display:wght@400&display=swap" rel="stylesheet">
+    <title>{title}</title>
+  </head>
+  <body>
+    <!-- Mobile header (visible only on mobile) -->
+    <div class="mobile-header">
+      <a href="/" class="mobile-site-title">2 Samuel Study Group</a>
+      <button class="nav-toggle" id="nav-toggle">☰ Menu</button>
+    </div>
+
+    <!-- Mobile navigation (separate from layout-container) -->
+    <nav class="mobile-navigation" id="main-nav">
+      <!-- Mobile navigation content -->
+      <ul class="nav-links mobile-nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog">Studies</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="layout-container">
+      <!-- Navigation Column -->
+      <nav class="navigation">
+        <div class="nav-stable">
+          <h1 class="site-title">
+            <a href="/">
+              <strong>2 Samuel</strong> 
+              Study Group
+            </a>
+          </h1>
+          <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Studies</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-dynamic">
+          <!-- Extended navigation content can go here -->
+        </div>
+      </nav>
+
+      <!-- Main Content Column -->
+      <main class="main-content">
+        {title && title !== "2 Samuel Study Group" && <h1 style={`view-transition-name: ${postId ? `post-title-${postId}` : 'page-title'}`}>{title}</h1>}
+        {subtitle && <p class="subtitle">{subtitle}</p>}
+        <slot />
+      </main>
+
+      <!-- Margin Notes Column -->
+      <aside class="margin-notes">
+        <slot name="margin-notes" />
+      </aside>
+    </div>
+    
+    {showFooter && <Footer />}
+    
+    <script>
+      // Mobile navigation toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.getElementById('nav-toggle');
+        const mainNav = document.getElementById('main-nav');
+        
+        if (navToggle && mainNav) {
+          navToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('show');
+            
+            if (mainNav.classList.contains('show')) {
+              navToggle.textContent = '✕ Close';
+            } else {
+              navToggle.textContent = '☰ Menu';
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
