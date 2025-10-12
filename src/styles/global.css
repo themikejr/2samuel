@@ -90,9 +90,26 @@ body::before {
 /* Ensure margin-notes container is positioned for absolute children */
 .margin-notes {
   position: relative;
+  overflow: visible;
 }
 
-@media (max-width: 1024px) {
+/* Prevent overflow when viewport is close to max-width */
+@media (max-width: 1460px) {
+  .layout-container {
+    max-width: calc(100vw - 4rem);
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .sidenote,
+  .marginnote {
+    margin-right: calc(-300px - 2rem);
+    width: 280px;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 1290px) {
   .layout-container {
     grid-template-columns: 200px 1fr;
     gap: 1.5rem;
@@ -100,6 +117,28 @@ body::before {
 
   .margin-notes {
     display: none;
+  }
+
+  .sidenote,
+  .marginnote {
+    display: none;
+  }
+
+  .margin-toggle:checked + .sidenote,
+  .margin-toggle:checked + .marginnote {
+    display: block;
+    float: none;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    background-color: rgba(139, 69, 19, 0.05);
+    border-left: 3px solid var(--color-accent);
+    position: relative;
+  }
+
+  label.margin-toggle:not(.sidenote-number) {
+    display: inline;
   }
 }
 
@@ -357,6 +396,8 @@ h1.site-title {
 /* Main Content Column */
 .main-content {
   max-width: none;
+  overflow-x: visible;
+  min-width: 0;
 }
 
 .main-content h1,
@@ -417,6 +458,7 @@ body {
   vertical-align: baseline;
   position: relative;
   color: var(--color-text-light);
+  max-width: 300px;
 }
 
 .sidenote-number {
