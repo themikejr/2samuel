@@ -42,6 +42,12 @@ html {
   line-height: 1.6;
 }
 
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
 body {
   font-family: var(--font-body);
   color: var(--color-text);
@@ -290,10 +296,12 @@ body::before {
 
 .site-title {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 1rem;
   color: var(--color-text);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
 }
 
 h1.site-title {
@@ -353,21 +361,37 @@ h1.site-title {
 
 .main-content h1,
 .main-content h2,
-.main-content h3 {
+.main-content h3,
+.main-content h4 {
   font-family: var(--font-display);
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
 }
 
 .main-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.25rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 
 .main-content h2 {
-  font-size: 1.8rem;
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  letter-spacing: -0.01em;
+}
+
+.main-content h3 {
+  font-size: 1.35rem;
   margin-top: 2rem;
-  margin-bottom: 1rem;
+}
+
+.main-content h4 {
+  font-size: 1.1rem;
+  margin-top: 1.75rem;
+  font-weight: 600;
 }
 
 .main-content p {
@@ -388,8 +412,8 @@ body {
   width: 50%;
   margin-top: 0.3rem;
   margin-bottom: 0;
-  font-size: inherit;
-  line-height: 1.3;
+  font-size: 0.9rem;
+  line-height: 1.4;
   vertical-align: baseline;
   position: relative;
   color: var(--color-text-light);
@@ -478,10 +502,17 @@ label.margin-toggle:not(.sidenote-number) {
 }
 
 blockquote {
-  font-style: italic;
   margin: 1.5rem 0;
   padding-left: 1rem;
   border-left: 2px solid var(--color-text-light);
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  font-style: normal;
 }
 
 /* Links */
@@ -510,6 +541,57 @@ a:hover {
 
 .main-content li {
   margin-bottom: 0.5rem;
+}
+
+/* Tables */
+.main-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.main-content table thead {
+  border-bottom: 2px solid var(--color-text);
+}
+
+.main-content table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.main-content table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-text-light);
+  vertical-align: top;
+}
+
+.main-content table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.main-content table tbody tr:hover {
+  background-color: rgba(139, 69, 19, 0.05);
+}
+
+@media (max-width: 768px) {
+  .main-content table {
+    font-size: 0.85rem;
+  }
+
+  .main-content table th,
+  .main-content table td {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .main-content table td:first-child,
+  .main-content table th:first-child {
+    white-space: nowrap;
+  }
 }
 
 .sr-only {
