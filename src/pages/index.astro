@@ -29,7 +29,7 @@ const latestPost = posts[0];
 	<h2>Latest Study</h2>
 	{latestPost && (
 		<article class="latest-post">
-			<h3 class="post-title">
+			<h3 class="post-title" style={`view-transition-name: post-title-${latestPost.id}`}>
 				<a href={`/blog/${latestPost.id}`}>{latestPost.data.title}</a>
 			</h3>
 			<div class="post-meta">
