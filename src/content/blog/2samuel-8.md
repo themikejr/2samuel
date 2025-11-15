@@ -23,7 +23,7 @@ later in 2 Samuel. Psalm 60 and 1 Chronicles 18 serve as parallel passages.
 
 ## Poetry From the Front
 
-Psalm 60 seems to situation itself in the midst of the battles mentioned in 2 Samuel 8.
+Psalm 60 seems to situate itself in the midst of the battles mentioned in 2 Samuel 8.
 The superscription says:
 
 > For the director of music.  
