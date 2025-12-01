@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Shammah",
+  "name": "Shammah",
+  "description": "Shammah, son of Agee, was a man during Israel's united kingdom mentioned in 2 Samuel 23:11 and also a king of Zeboiim during the time of Abraham.",
+  "gender": "male",
+  "father": "person:Agee",
+  "roles": [
+    "Warrior"
+  ],
+  "references": [
+    "10023011"
+  ]
+}

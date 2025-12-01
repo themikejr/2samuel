@@ -1,0 +1,21 @@
+{
+  "acaiId": "person:Sheba.4",
+  "name": "Sheba",
+  "description": "The son of Bichri who led a rebellion against King David.",
+  "gender": "male",
+  "father": "person:Bichri",
+  "tribe": "group:Benjamin",
+  "roles": [
+    "Leader"
+  ],
+  "references": [
+    "10020001",
+    "10020002",
+    "10020006",
+    "10020007",
+    "10020010",
+    "10020013",
+    "10020021",
+    "10020022"
+  ]
+}

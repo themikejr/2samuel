@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Ikkesh",
+  "name": "Ikkesh",
+  "description": "A man living during Israel's united kingdom, father of Ira, mentioned in 2 Samuel 23:26.",
+  "gender": "male",
+  "offspring": [
+    "person:Ira.2"
+  ],
+  "references": [
+    "10023026"
+  ]
+}

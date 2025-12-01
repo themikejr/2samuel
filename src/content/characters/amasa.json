@@ -1,0 +1,24 @@
+{
+  "acaiId": "person:Amasa",
+  "name": "Amasa",
+  "description": "A military leader who replaced Abner as general during the time of Israel’s united kingdom. He was a son of Jether and Abigail, who was King David’s sister.",
+  "gender": "male",
+  "father": "person:Jether.3",
+  "mother": "person:Abigail.2",
+  "tribe": "group:Arabia",
+  "roles": [
+    "Military Commander",
+    "Army Commander",
+    "Warrior"
+  ],
+  "references": [
+    "10017025",
+    "10019014",
+    "10020004",
+    "10020005",
+    "10020008",
+    "10020009",
+    "10020010",
+    "10020012"
+  ]
+}

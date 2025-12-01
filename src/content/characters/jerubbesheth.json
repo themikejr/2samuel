@@ -1,0 +1,18 @@
+{
+  "acaiId": "person:Jerubbesheth",
+  "name": "Jerubbesheth (Gideon)",
+  "description": "A judge from the tribe of Manasseh, also known as Gideon and Jerubbaal, who lived before Israel's Monarchy, son of Joash and father of Jether, Abimelech, and Jotham.",
+  "gender": "male",
+  "father": "person:Joash",
+  "offspring": [
+    "person:Jether.2",
+    "person:Abimelech.2",
+    "person:Jotham"
+  ],
+  "roles": [
+    "Judge"
+  ],
+  "references": [
+    "10011021"
+  ]
+}

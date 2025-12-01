@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Nathan.3",
+  "name": "Nathan",
+  "description": "Nathan, living during Israel's united kingdom, was the father of the warrior Igal and brother of Joel.",
+  "gender": "male",
+  "father": "person:FatherOfNathan",
+  "offspring": [
+    "person:Igal.2"
+  ],
+  "references": [
+    "10023036"
+  ]
+}

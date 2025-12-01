@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Ammihur",
+  "name": "Ammihur (Ammihud)",
+  "description": "A man living during the time of Israel's united kingdom, father of Talmai, mentioned in 2 Samuel 13:37.",
+  "gender": "male",
+  "offspring": [
+    "person:Talmai.2"
+  ],
+  "references": [
+    "10013037"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Jonathan.5",
+  "name": "Jonathan",
+  "description": "A man during the time of Israel's united kingdom and the son of Shammah, mentioned in 2 Samuel 23:32.",
+  "gender": "male",
+  "father": "person:Shammah.4",
+  "references": [
+    "10023032"
+  ]
+}

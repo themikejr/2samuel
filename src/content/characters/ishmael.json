@@ -1,0 +1,30 @@
+{
+  "acaiId": "person:Ishmael",
+  "name": "Ishmael",
+  "description": "The patriarch Abraham’s first-born son by Hagar. He was father to twelve sons and half-brother to Isaac.",
+  "gender": "male",
+  "father": "person:Abraham",
+  "mother": "person:Hagar",
+  "offspring": [
+    "person:Nebaioth",
+    "person:Kedar",
+    "person:Adbeel",
+    "person:Mibsam",
+    "person:Mishma",
+    "person:Dumah",
+    "person:Massa",
+    "person:Hadad.4",
+    "person:Tema",
+    "person:Jetur",
+    "person:Naphish",
+    "person:Kedemah",
+    "person:Mahalath"
+  ],
+  "tribe": "group:Arabia",
+  "roles": [
+    "Patriarch"
+  ],
+  "references": [
+    "10017025"
+  ]
+}

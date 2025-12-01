@@ -1,0 +1,20 @@
+{
+  "acaiId": "person:Micah.2",
+  "name": "Micah",
+  "description": "A grandson of King Saul and son of Mephibosheth.",
+  "gender": "male",
+  "father": "person:Mephibosheth",
+  "offspring": [
+    "person:Pithon",
+    "person:Melech",
+    "person:Tarea",
+    "person:Ahaz.2"
+  ],
+  "tribe": "group:Benjamin",
+  "roles": [
+    "Royal Family Member"
+  ],
+  "references": [
+    "10009012"
+  ]
+}

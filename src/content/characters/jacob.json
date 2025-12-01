@@ -1,0 +1,38 @@
+{
+  "acaiId": "person:Jacob",
+  "name": "Jacob (Patriarch)",
+  "description": "Originally named Jacob, he was a son of the patriarch Isaac and twin brother of Esau. God changed his name to Israel. He fathered twelve sons whose descendants became the twelve tribes of the nation of Israel. He is mentioned often in the New Testament.",
+  "gender": "male",
+  "father": "person:Isaac",
+  "mother": "person:Rebekah",
+  "partners": [
+    "person:Rachel",
+    "person:Leah",
+    "person:Zilpah",
+    "person:Bilhah"
+  ],
+  "offspring": [
+    "person:Reuben",
+    "person:Simeon.5",
+    "person:Levi.3",
+    "person:Judah.4",
+    "person:Dan",
+    "person:Naphtali",
+    "person:Gad",
+    "person:Asher",
+    "person:Issachar",
+    "person:Zebulun",
+    "person:Dinah",
+    "person:Joseph.10",
+    "person:Benjamin"
+  ],
+  "tribe": "group:Earlypatriarchs",
+  "roles": [
+    "Shepherd",
+    "Relative of Jesus",
+    "Patriarch"
+  ],
+  "references": [
+    "10023001"
+  ]
+}

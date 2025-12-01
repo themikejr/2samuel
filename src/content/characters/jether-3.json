@@ -1,0 +1,16 @@
+{
+  "acaiId": "person:Jether.3",
+  "name": "Jether",
+  "description": "An Ishmaelite (or Israelite) during the time of Israel’s united kingdom, married to Zeruiah's niece Abigail and father of David's military commander Amasa.",
+  "gender": "male",
+  "partners": [
+    "person:Abigail.2"
+  ],
+  "offspring": [
+    "person:Amasa"
+  ],
+  "tribe": "group:Arabia",
+  "references": [
+    "10017025"
+  ]
+}

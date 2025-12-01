@@ -1,0 +1,21 @@
+{
+  "acaiId": "person:Abigail.2",
+  "name": "Abigail (Sister of King David)",
+  "description": "The sister of King David and mother of Amasa, mentioned in 2 Samuel 17:25.",
+  "gender": "female",
+  "father": "person:Jesse",
+  "mother": "person:Nahash.3",
+  "partners": [
+    "person:Jether.3"
+  ],
+  "offspring": [
+    "person:Amasa"
+  ],
+  "tribe": "group:Judah",
+  "roles": [
+    "Royal Family Member"
+  ],
+  "references": [
+    "10017025"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "acaiId": "person:Joseph.10",
+  "name": "Joseph",
+  "description": "A son of the patriarch Jacob and Egyptian official. He was known for his coat of many colors and his interpretation of dreams.",
+  "gender": "male",
+  "father": "person:Israel",
+  "mother": "person:Rachel",
+  "partners": [
+    "person:Asenath"
+  ],
+  "offspring": [
+    "person:Manasseh",
+    "person:Ephraim"
+  ],
+  "tribe": "group:Earlypatriarchs",
+  "roles": [
+    "Governor",
+    "Patriarch"
+  ],
+  "references": [
+    "10019021"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "acaiId": "person:Heth",
+  "name": "Heth",
+  "description": "Son of the patriarch Noah's grandson Canaan and regarded as the founder of the Hittites.",
+  "gender": "male",
+  "father": "person:Canaan",
+  "tribe": "group:Earlypatriarchs",
+  "roles": [
+    "Leader",
+    "Patriarch",
+    "Founder of Group"
+  ],
+  "references": [
+    "10011003",
+    "10011006",
+    "10011017",
+    "10011021",
+    "10011024",
+    "10012009",
+    "10012010",
+    "10023039"
+  ]
+}

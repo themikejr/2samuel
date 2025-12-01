@@ -1,0 +1,9 @@
+{
+  "acaiId": "person:Maharai",
+  "name": "Maharai",
+  "description": "A warrior from Netophah during the reign of King David, mentioned in 2 Samuel 23:28.",
+  "gender": "male",
+  "references": [
+    "10023028"
+  ]
+}

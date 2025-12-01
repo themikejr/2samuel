@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:HugeMan",
+  "name": "Huge Man",
+  "description": "Huge Man, a giant from the time of Israel's united kingdom, was the son of Rapha and brother of Goliath, Ishbi-benob, Saph, and Lahmi.",
+  "gender": "male",
+  "father": "person:Rapha",
+  "references": [
+    "10021020"
+  ]
+}

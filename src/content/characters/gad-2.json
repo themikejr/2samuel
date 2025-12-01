@@ -1,0 +1,16 @@
+{
+  "acaiId": "person:Gad.2",
+  "name": "Gad (Prophet)",
+  "description": "A man who lived during Israel’s united kingdom, and was called King David's seer.",
+  "gender": "male",
+  "roles": [
+    "Prophet"
+  ],
+  "references": [
+    "10024011",
+    "10024013",
+    "10024014",
+    "10024018",
+    "10024019"
+  ]
+}

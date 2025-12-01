@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Goliath",
+  "name": "Goliath",
+  "description": "Goliath was a giant Philistine from Gath, the son of Rapha, who was killed by David before he became king of Israel.",
+  "gender": "male",
+  "father": "person:Rapha",
+  "roles": [
+    "Warrior"
+  ],
+  "references": [
+    "10021019"
+  ]
+}

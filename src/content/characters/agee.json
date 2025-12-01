@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Agee",
+  "name": "Agee",
+  "description": "A man from Israel's united kingdom period, father of the warrior Shammah.",
+  "gender": "male",
+  "offspring": [
+    "person:Shammah"
+  ],
+  "references": [
+    "10023011"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Zelek",
+  "name": "Zelek",
+  "description": "Zelek, an Ammonite, was a man living during Israel's united kingdom, mentioned in 2 Samuel 23:37.",
+  "gender": "male",
+  "tribe": "group:Ammon",
+  "references": [
+    "10023037"
+  ]
+}

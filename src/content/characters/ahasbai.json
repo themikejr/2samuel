@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Ahasbai",
+  "name": "Ahasbai",
+  "description": "A man from the time of Israel's united kingdom, father of Eliphelet, and mentioned in connection with King David's warriors.",
+  "gender": "male",
+  "offspring": [
+    "person:Eliphelet.2"
+  ],
+  "references": [
+    "10023034"
+  ]
+}

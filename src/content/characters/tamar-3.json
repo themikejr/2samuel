@@ -1,0 +1,17 @@
+{
+  "acaiId": "person:Tamar.3",
+  "name": "Tamar",
+  "description": "Tamar, only mentioned in 2 Samuel 14:27, was the daughter of Absalom and lived during the time of Israel's united kingdom.",
+  "gender": "female",
+  "father": "person:Absalom",
+  "partners": [
+    "person:Uriel.3"
+  ],
+  "offspring": [
+    "person:Maacah.3"
+  ],
+  "tribe": "group:Judah",
+  "references": [
+    "10014027"
+  ]
+}

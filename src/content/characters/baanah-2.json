@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Baanah.2",
+  "name": "Baanah",
+  "description": "A man who lived during Israel's united kingdom, father of warrior Heleb, mentioned in 2 Samuel 23:29.",
+  "gender": "male",
+  "offspring": [
+    "person:Heleb"
+  ],
+  "references": [
+    "10023029"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "acaiId": "person:Shimei.3",
+  "name": "Shimei (Shimeah)",
+  "description": "Shimei, also known as Shimea or Shimeah, was David's brother from the tribe of Judah during the united kingdom of Israel, son of Jesse and father of Jonadab.",
+  "gender": "male",
+  "father": "person:Jesse",
+  "mother": "person:Nahash.3",
+  "offspring": [
+    "person:Jonadab.2"
+  ],
+  "tribe": "group:Judah",
+  "roles": [
+    "Relative of Jesus"
+  ],
+  "references": [
+    "10021021"
+  ]
+}

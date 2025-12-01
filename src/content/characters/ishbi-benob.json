@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Ishbi-benob",
+  "name": "Ishbi-benob",
+  "description": "A giant and descendant of Rapha, mentioned in 2 Samuel 21:16, living during Israel's united kingdom.",
+  "gender": "male",
+  "father": "person:Rapha",
+  "roles": [
+    "Warrior"
+  ],
+  "references": [
+    "10021016"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "acaiId": "person:Ahoah",
+  "name": "Ahoah",
+  "description": "A tribal leader who belonged to the tribe of Benjamin. His descendants are called Ahohites.",
+  "gender": "male",
+  "father": "person:Bela",
+  "tribe": "group:Benjamin",
+  "roles": [
+    "Patriarch"
+  ],
+  "references": [
+    "10023009",
+    "10023028"
+  ]
+}

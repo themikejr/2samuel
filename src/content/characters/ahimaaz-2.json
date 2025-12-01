@@ -1,0 +1,26 @@
+{
+  "acaiId": "person:Ahimaaz.2",
+  "name": "Ahimaaz (Son of Zadok)",
+  "description": "A Levite and son of the high priest Zadok. Ahimaaz joined Jonathan, son of Abiathar, in spying on Absalom.",
+  "gender": "male",
+  "father": "person:Zadok.2",
+  "offspring": [
+    "person:Azariah.2"
+  ],
+  "tribe": "group:Levi",
+  "roles": [
+    "Priest"
+  ],
+  "references": [
+    "10015027",
+    "10015036",
+    "10017017",
+    "10017020",
+    "10018019",
+    "10018022",
+    "10018023",
+    "10018027",
+    "10018028",
+    "10018029"
+  ]
+}

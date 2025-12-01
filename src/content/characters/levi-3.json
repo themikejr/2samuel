@@ -1,0 +1,22 @@
+{
+  "acaiId": "person:Levi.3",
+  "name": "Levi",
+  "description": "One of the patriarch Jacob’s sons and founder of the tribe of Levi.",
+  "gender": "male",
+  "father": "person:Israel",
+  "mother": "person:Leah",
+  "offspring": [
+    "person:Gershon",
+    "person:Kohath",
+    "person:Merari",
+    "person:Jochebed"
+  ],
+  "tribe": "group:Levi",
+  "roles": [
+    "Priest",
+    "Patriarch"
+  ],
+  "references": [
+    "10015024"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "acaiId": "person:Shobi",
+  "name": "Shobi",
+  "description": "Shobi was an Ammonite living during the time of Israel's united kingdom, only mentioned in 2 Samuel 17:27.",
+  "gender": "male",
+  "father": "person:Nahash.4",
+  "tribe": "group:Ammon",
+  "references": [
+    "10017027"
+  ]
+}

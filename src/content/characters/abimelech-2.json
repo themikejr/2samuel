@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Abimelech.2",
+  "name": "Abimelech (Son of Gideon)",
+  "description": "Son of Gideon who murdered 70 brothers and became king of Shechem.",
+  "gender": "male",
+  "father": "person:Gideon",
+  "roles": [
+    "King"
+  ],
+  "references": [
+    "10011021"
+  ]
+}

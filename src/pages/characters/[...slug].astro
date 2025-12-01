@@ -26,27 +26,56 @@ function formatReference(ref: string): { chapter: number; verse: number } {
 	return { chapter, verse };
 }
 
-// Helper function to link character names in text
-function linkCharacterNames(text: string): string {
+// Helper function to extract base name (before first parenthesis)
+function getBaseName(name: string): string {
+	return name.split('(')[0].trim();
+}
+
+// Helper function to link character names in text using relationship context
+function linkCharacterNames(text: string, relationshipContext: Map<string, any>): string {
 	let linkedText = text;
 
-	// Sort characters by name length (longest first) to avoid partial matches
-	const sortedCharacters = [...allCharacters].sort(
-		(a, b) => b.data.name.length - a.data.name.length
+	// Build a map of base names to character data from relationship context
+	// This allows us to link "Ahinoam" to the specific "Ahinoam (Wife of David)"
+	const nameToCharMap = new Map<string, { id: string; fullName: string; baseName: string }>();
+
+	for (const [acaiId, char] of relationshipContext) {
+		const baseName = getBaseName(char.data.name);
+		const lowerBaseName = baseName.toLowerCase();
+
+		// Check for base name conflicts in relationship context
+		if (nameToCharMap.has(lowerBaseName)) {
+			// If multiple people with same base name in relationships, use full name
+			const existing = nameToCharMap.get(lowerBaseName)!;
+			// Mark both as needing full name matching
+			existing.baseName = existing.fullName;
+			nameToCharMap.set(lowerBaseName, {
+				id: char.id,
+				fullName: char.data.name,
+				baseName: char.data.name // Use full name to avoid ambiguity
+			});
+		} else {
+			nameToCharMap.set(lowerBaseName, {
+				id: char.id,
+				fullName: char.data.name,
+				baseName: baseName
+			});
+		}
+	}
+
+	// Sort by name length (longest first) to avoid partial matches
+	const sortedEntries = Array.from(nameToCharMap.entries()).sort(
+		(a, b) => b[1].baseName.length - a[1].baseName.length
 	);
 
-	for (const char of sortedCharacters) {
-		// Skip linking the current character to itself
-		if (char.data.acaiId === character.data.acaiId) continue;
+	// Link characters from relationship context
+	for (const [lowerName, charInfo] of sortedEntries) {
+		// Try to match the base name in text
+		const namePattern = charInfo.baseName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+		const regex = new RegExp(`\\b${namePattern}('s)?\\b`, 'gi');
 
-		// Create regex to match the character name (case-insensitive, word boundaries)
-		// Also match names with possessive ('s)
-		const name = char.data.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // Escape special chars
-		const regex = new RegExp(`\\b${name}('s)?\\b`, 'gi');
-
-		// Replace with link (preserve original case and possessive)
 		linkedText = linkedText.replace(regex, (match) => {
-			return `<a href="/characters/${char.id}/" class="character-link">${match}</a>`;
+			return `<a href="/characters/${charInfo.id}/" class="character-link">${match}</a>`;
 		});
 	}
 
@@ -85,8 +114,19 @@ const siblings = allCharacters.filter((c) => {
 	return sharesFather || sharesMother;
 });
 
-// Process description to link character names
-const linkedDescription = linkCharacterNames(character.data.description);
+// Build relationship context for linking
+// Map of ACAI ID -> character object for all related characters
+const relationshipContext = new Map<string, any>();
+
+// Add direct relationships
+if (father) relationshipContext.set(father.data.acaiId, father);
+if (mother) relationshipContext.set(mother.data.acaiId, mother);
+partners.forEach((p) => relationshipContext.set(p.data.acaiId, p));
+offspring.forEach((o) => relationshipContext.set(o.data.acaiId, o));
+siblings.forEach((s) => relationshipContext.set(s.data.acaiId, s));
+
+// Process description to link character names using relationship context
+const linkedDescription = linkCharacterNames(character.data.description, relationshipContext);
 ---
 
 <Layout title={character.data.name}>

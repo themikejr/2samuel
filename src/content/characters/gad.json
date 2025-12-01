@@ -1,0 +1,26 @@
+{
+  "acaiId": "person:Gad",
+  "name": "Gad (Patriarch)",
+  "description": "One of the twelve sons of the patriarch Jacob by the slave Zilpah, and founder of the tribe of Gad.",
+  "gender": "male",
+  "father": "person:Israel",
+  "mother": "person:Zilpah",
+  "offspring": [
+    "person:Ziphion",
+    "person:Haggi",
+    "person:Shuni",
+    "person:Ezbon",
+    "person:Eri",
+    "person:Arod",
+    "person:Areli"
+  ],
+  "tribe": "group:Gad",
+  "roles": [
+    "Leader",
+    "Patriarch"
+  ],
+  "references": [
+    "10023036",
+    "10024005"
+  ]
+}

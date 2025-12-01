@@ -1,0 +1,30 @@
+{
+  "acaiId": "person:Jesse",
+  "name": "Jesse",
+  "description": "Father of King David from the tribe of Judah.",
+  "gender": "male",
+  "father": "person:Obed",
+  "partners": [
+    "person:Nahash.3"
+  ],
+  "offspring": [
+    "person:David",
+    "person:Eliab.3",
+    "person:Abinadab.3",
+    "person:Shimeah.2",
+    "person:Nethanel.2",
+    "person:Raddai",
+    "person:Ozem",
+    "person:Elihu.4",
+    "person:Zeruiah",
+    "person:Abigail.2"
+  ],
+  "tribe": "group:Judah",
+  "roles": [
+    "Royal Family Member"
+  ],
+  "references": [
+    "10020001",
+    "10023001"
+  ]
+}

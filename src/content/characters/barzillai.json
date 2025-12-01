@@ -1,0 +1,17 @@
+{
+  "acaiId": "person:Barzillai",
+  "name": "Barzillai",
+  "description": "An elder from Rogelim who supported King David during the time of Israel’s united kingdom.",
+  "gender": "male",
+  "roles": [
+    "Leader"
+  ],
+  "references": [
+    "10017027",
+    "10019032",
+    "10019033",
+    "10019034",
+    "10019035",
+    "10019040"
+  ]
+}

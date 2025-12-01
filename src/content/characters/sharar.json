@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Sharar",
+  "name": "Sharar",
+  "description": "Sharar, also known as Sachar, Sacar, or Sakar, was a man living during Israel's united kingdom, father of Ahiam, mentioned in 2 Samuel 23:33 and 1 Chronicles 11:35.",
+  "gender": "male",
+  "offspring": [
+    "person:Ahiam"
+  ],
+  "references": [
+    "10023033"
+  ]
+}

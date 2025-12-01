@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Igal.2",
+  "name": "Igal",
+  "description": "A warrior during Israel's united kingdom, son of Nathan from Zobah, mentioned in 2 Samuel 23:36.",
+  "gender": "male",
+  "father": "person:Nathan.3",
+  "references": [
+    "10023036"
+  ]
+}

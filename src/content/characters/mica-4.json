@@ -1,0 +1,17 @@
+{
+  "acaiId": "person:Mica.4",
+  "name": "Mica (Micah)",
+  "description": "Mica, a man from the tribe of Benjamin during Israel's united kingdom, is mentioned in 2 Samuel 9:12 as the son of Mephibosheth and father of Pithon, Melech, Tarea, and Ahaz.",
+  "gender": "male",
+  "father": "person:Mephibosheth",
+  "offspring": [
+    "person:Pithon",
+    "person:Melech",
+    "person:Tarea",
+    "person:Ahaz.2"
+  ],
+  "tribe": "group:Benjamin",
+  "references": [
+    "10009012"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "acaiId": "person:Shimeah.2",
+  "name": "Shimeah",
+  "description": "The son of Jesse, brother of King David, and father of Jonadab.",
+  "gender": "male",
+  "father": "person:Jesse",
+  "mother": "person:Nahash.3",
+  "offspring": [
+    "person:Jonadab.2"
+  ],
+  "tribe": "group:Judah",
+  "roles": [
+    "Royal Family Member",
+    "Relative of Jesus"
+  ],
+  "references": [
+    "10013003",
+    "10013032",
+    "10021021"
+  ]
+}

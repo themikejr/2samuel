@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Jashen",
+  "name": "Jashen",
+  "description": "A man living during Israel's united kingdom, also called Hashem, mentioned in 2 Samuel 23:32 and 1 Chronicles 11:34.",
+  "gender": "male",
+  "offspring": [
+    "person:SonOfJashen"
+  ],
+  "references": [
+    "10023032"
+  ]
+}

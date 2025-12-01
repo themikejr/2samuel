@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Eliam.2",
+  "name": "Eliam",
+  "description": "Eliam, son of Ahithophel and father of Bathsheba, was a warrior during the time of Israel's united kingdom, mentioned in 2 Samuel 23:34.",
+  "gender": "male",
+  "father": "person:Ahithophel",
+  "references": [
+    "10023034"
+  ]
+}

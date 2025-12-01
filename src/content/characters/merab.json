@@ -1,0 +1,18 @@
+{
+  "acaiId": "person:Merab",
+  "name": "Merab",
+  "description": "A daughter of King Saul, sister of Jonathan, and wife of Adriel.",
+  "gender": "female",
+  "father": "person:Saul.2",
+  "mother": "person:Ahinoam",
+  "partners": [
+    "person:Adriel"
+  ],
+  "tribe": "group:Benjamin",
+  "roles": [
+    "Royal Family Member"
+  ],
+  "references": [
+    "10021008"
+  ]
+}

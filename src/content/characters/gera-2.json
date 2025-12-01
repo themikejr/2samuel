@@ -1,0 +1,14 @@
+{
+  "acaiId": "person:Gera.2",
+  "name": "Gera",
+  "description": "A man from the tribe of Benjamin and father of Shimei, who lived during the time of Israel’s united kingdom.",
+  "gender": "male",
+  "offspring": [
+    "person:Shimei.5"
+  ],
+  "references": [
+    "10016005",
+    "10019017",
+    "10019019"
+  ]
+}

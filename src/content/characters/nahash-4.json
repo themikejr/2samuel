@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Nahash.4",
+  "name": "Nahash",
+  "description": "Nahash, a man of the Ammonites living during the time of Israel's united kingdom and mentioned in 2 Samuel 17:27, was the father of Shobi.",
+  "gender": "male",
+  "offspring": [
+    "person:Shobi"
+  ],
+  "tribe": "group:Ammon",
+  "references": [
+    "10017027"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Shobach",
+  "name": "Shobach",
+  "description": "Syrian military commander of Hadadezer who was defeated by King David.",
+  "gender": "male",
+  "roles": [
+    "Military Commander"
+  ],
+  "references": [
+    "10010016",
+    "10010018"
+  ]
+}

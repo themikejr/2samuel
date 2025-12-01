@@ -1,0 +1,16 @@
+{
+  "acaiId": "person:Shimei.5",
+  "name": "Shimei",
+  "description": "A son of Gera and relative of King Saul from Bahurim who cursed King David as he fled from Absalom. ",
+  "gender": "male",
+  "father": "person:Gera.2",
+  "references": [
+    "10016005",
+    "10016007",
+    "10016013",
+    "10019017",
+    "10019019",
+    "10019022",
+    "10019024"
+  ]
+}

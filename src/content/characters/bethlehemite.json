@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Bethlehemite",
+  "name": "Bethlehemite (Lahmi)",
+  "description": "A giant named Lahmi, mentioned in 2 Samuel 21:19, living during Israel's united kingdom, brother of Goliath, and son of Rapha.",
+  "gender": "male",
+  "father": "person:Rapha",
+  "references": [
+    "10021016"
+  ]
+}

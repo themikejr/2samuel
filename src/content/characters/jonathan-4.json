@@ -1,0 +1,16 @@
+{
+  "acaiId": "person:Jonathan.4",
+  "name": "Jonathan",
+  "description": "A priest during the time of Israel’s united kingdom and a son of Abiathar.",
+  "gender": "male",
+  "father": "person:Abiathar",
+  "roles": [
+    "Priest"
+  ],
+  "references": [
+    "10015027",
+    "10015036",
+    "10017017",
+    "10017020"
+  ]
+}

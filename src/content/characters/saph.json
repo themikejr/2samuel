@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Saph",
+  "name": "Saph",
+  "description": "Saph, also known as Sippai, was a giant living at the time of Israel's united kingdom, first mentioned in 2 Samuel 21:18, and was the son of Rapha and brother of Goliath, Ishbi-benob, Lahmi, and another huge man.",
+  "gender": "male",
+  "father": "person:Rapha",
+  "references": [
+    "10021018"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Shammah.4",
+  "name": "Shammah",
+  "description": "Shammah, also called Shagee or Shage, was a man during Israel's united kingdom and father of Jonathan, mentioned in 2 Samuel 23:33 and 1 Chronicles 11:34.",
+  "gender": "male",
+  "offspring": [
+    "person:Jonathan.5"
+  ],
+  "references": [
+    "10023033"
+  ]
+}

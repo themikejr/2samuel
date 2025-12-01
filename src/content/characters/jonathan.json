@@ -1,0 +1,11 @@
+{
+  "acaiId": "person:Jonathan",
+  "name": "Jonathan (Jonadab)",
+  "description": "David's nephew, son of Shimeah, living during Israel's united kingdom, also called Jonadab, mentioned in 2 Samuel and 1 Chronicles.",
+  "gender": "male",
+  "father": "person:Shimeah.2",
+  "tribe": "group:Judah",
+  "references": [
+    "10021021"
+  ]
+}

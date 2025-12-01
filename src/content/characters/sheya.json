@@ -1,0 +1,17 @@
+{
+  "acaiId": "person:Sheya",
+  "name": "Sheya (Seraiah)",
+  "description": "Sheya, also known as Seraiah or Shavsha, was a man living during Israel's united kingdom, first mentioned in 2 Samuel 8:17.",
+  "gender": "male",
+  "offspring": [
+    "person:Elihoreph",
+    "person:Ahijah"
+  ],
+  "roles": [
+    "Scribe",
+    "Priest"
+  ],
+  "references": [
+    "10020025"
+  ]
+}

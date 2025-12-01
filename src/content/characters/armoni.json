@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Armoni",
+  "name": "Armoni",
+  "description": "A son of King Saul and Rizpah from the tribe of Benjamin, given by David to the Gibeonites to be killed, mentioned in 2 Samuel 21:8.",
+  "gender": "male",
+  "father": "person:Saul.2",
+  "mother": "person:Rizpah",
+  "tribe": "group:Benjamin",
+  "references": [
+    "10021008"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Messenger",
+  "name": "A Messenger",
+  "description": "A messenger participating in a passage.",
+  "references": [
+    "10011023",
+    "10018031",
+    "10018032"
+  ]
+}

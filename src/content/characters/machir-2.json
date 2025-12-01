@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Machir.2",
+  "name": "Machir",
+  "description": "A man from the time of Israel's united kingdom, son of Ammiel, mentioned in 2 Samuel 9:4.",
+  "gender": "male",
+  "father": "person:Ammiel.2",
+  "references": [
+    "10009004",
+    "10009005",
+    "10017027"
+  ]
+}

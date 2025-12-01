@@ -1,0 +1,34 @@
+{
+  "acaiId": "person:Uriah",
+  "name": "Uriah",
+  "description": "Uriah the Hittite was Bathsheba’s first husband, who was murdered by King David. He is listed in record of Jesus' family line.",
+  "gender": "male",
+  "partners": [
+    "person:Bathsheba"
+  ],
+  "roles": [
+    "Military Commander",
+    "Relative of Jesus"
+  ],
+  "references": [
+    "10011003",
+    "10011006",
+    "10011007",
+    "10011008",
+    "10011009",
+    "10011010",
+    "10011011",
+    "10011012",
+    "10011014",
+    "10011015",
+    "10011016",
+    "10011017",
+    "10011021",
+    "10011024",
+    "10011026",
+    "10012009",
+    "10012010",
+    "10012015",
+    "10023039"
+  ]
+}

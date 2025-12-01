@@ -20,6 +20,7 @@ BACKGROUND_CHARS=(
   "ephraim.json"         # Ephraim the patriarch/tribe founder
   "jashar.json"          # Book of Jashar, not a person
   "jerusalemwives.json"  # Generic collective, not an individual
+  "abigal.json"          # Duplicate of abigail-2.json (spelling variant)
 )
 
 for char in "${BACKGROUND_CHARS[@]}"; do

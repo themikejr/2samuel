@@ -1,0 +1,26 @@
+{
+  "acaiId": "person:Tamar.2",
+  "name": "Tamar",
+  "description": "A daughter of King David by Maacah, and sister of Absalom. Her half-brother Amnon raped her.",
+  "gender": "female",
+  "father": "person:David",
+  "mother": "person:Maacah.2",
+  "tribe": "group:Judah",
+  "roles": [
+    "Royal Family Member"
+  ],
+  "references": [
+    "10013001",
+    "10013002",
+    "10013004",
+    "10013005",
+    "10013006",
+    "10013007",
+    "10013008",
+    "10013010",
+    "10013019",
+    "10013020",
+    "10013022",
+    "10013032"
+  ]
+}

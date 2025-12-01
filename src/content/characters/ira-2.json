@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Ira.2",
+  "name": "Ira",
+  "description": "A man living during Israel's united kingdom, son of Ikkesh, mentioned in 2 Samuel 23:26.",
+  "gender": "male",
+  "father": "person:Ikkesh",
+  "references": [
+    "10023026"
+  ]
+}

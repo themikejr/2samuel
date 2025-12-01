@@ -1,0 +1,30 @@
+{
+  "acaiId": "person:Ahithophel",
+  "name": "Ahithophel",
+  "description": "An advisor of King David and David's son Absalom. Ahithophel was from Giloh.",
+  "gender": "male",
+  "offspring": [
+    "person:Eliam.2"
+  ],
+  "roles": [
+    "Official",
+    "Advisor"
+  ],
+  "references": [
+    "10015012",
+    "10015031",
+    "10015034",
+    "10016015",
+    "10016020",
+    "10016021",
+    "10016023",
+    "10017001",
+    "10017006",
+    "10017007",
+    "10017014",
+    "10017015",
+    "10017021",
+    "10017023",
+    "10023034"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "acaiId": "person:Jair.2",
+  "name": "Jair",
+  "description": "Great-grandson of the patriarch Joseph and grandson of Manasseh, and son of Segub. He lived during the time of Egyptian slavery and the wilderness wandering of the Israelites. ",
+  "gender": "male",
+  "father": "person:Segub.2",
+  "tribe": "group:Judah",
+  "roles": [
+    "Leader",
+    "Warrior",
+    "Patriarch"
+  ],
+  "references": [
+    "10020026"
+  ]
+}

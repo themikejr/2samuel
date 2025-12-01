@@ -1,0 +1,24 @@
+{
+  "acaiId": "person:Nahash.3",
+  "name": "Nahash",
+  "description": "Nahash, a woman living during the time of Israel's united kingdom and mentioned in 2 Samuel 17:25, was the wife of Jesse and possibly the mother of David and his siblings.",
+  "gender": "female",
+  "partners": [
+    "person:Jesse"
+  ],
+  "offspring": [
+    "person:David",
+    "person:Eliab.3",
+    "person:Abinadab.3",
+    "person:Shimeah.2",
+    "person:Nethanel.2",
+    "person:Raddai",
+    "person:Ozem",
+    "person:Elihu.4",
+    "person:Zeruiah",
+    "person:Abigail.2"
+  ],
+  "references": [
+    "10017025"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Barzillai.2",
+  "name": "Barzillai",
+  "description": "A man from Meholah during Israel's united kingdom, father of Adriel, mentioned in 2 Samuel 21:8.",
+  "gender": "male",
+  "offspring": [
+    "person:Adriel"
+  ],
+  "references": [
+    "10021008"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "acaiId": "person:Lookout",
+  "name": "A Lookout",
+  "description": "A lookout or watchman.",
+  "references": [
+    "10018027"
+  ]
+}

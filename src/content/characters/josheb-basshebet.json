@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Josheb-basshebet",
+  "name": "Josheb-basshebet (Jashobeam)",
+  "description": "A warrior in the time of King David, also known as Jashobeam, son of Zabdiel, mentioned in 2 Samuel 23:8.",
+  "gender": "male",
+  "father": "person:Zabdiel",
+  "references": [
+    "10023008"
+  ]
+}

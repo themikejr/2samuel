@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Dodo.3",
+  "name": "Dodo",
+  "description": "Dodo, mentioned in 2 Samuel 23:24, was the father of Elhanan, a warrior during the time of King David in Israel's united kingdom.",
+  "gender": "male",
+  "offspring": [
+    "person:Elhanan.2"
+  ],
+  "references": [
+    "10023024"
+  ]
+}

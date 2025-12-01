@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Adriel",
+  "name": "Adriel",
+  "description": "A man living during Israel's united kingdom, son of Barzillai, and married to Merab.",
+  "gender": "male",
+  "father": "person:Barzillai.2",
+  "partners": [
+    "person:Merab"
+  ],
+  "references": [
+    "10021008"
+  ]
+}

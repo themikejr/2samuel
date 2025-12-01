@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Mebunnai",
+  "name": "Mebunnai (Sibbecai)",
+  "description": "A warrior from Hushah also known as Sibbecai, living during the time of King David.",
+  "gender": "male",
+  "roles": [
+    "Warrior"
+  ],
+  "references": [
+    "10023027"
+  ]
+}

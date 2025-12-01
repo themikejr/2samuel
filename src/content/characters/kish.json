@@ -1,0 +1,18 @@
+{
+  "acaiId": "person:Kish",
+  "name": "Kish",
+  "description": "Father of King Saul from the tribe of Benjamin who lived during Israel’s united kingdom.",
+  "gender": "male",
+  "father": "person:Abiel.2",
+  "mother": "person:Maacah.6",
+  "offspring": [
+    "person:Saul.2"
+  ],
+  "tribe": "group:Benjamin",
+  "roles": [
+    "Royal Family Member"
+  ],
+  "references": [
+    "10021014"
+  ]
+}

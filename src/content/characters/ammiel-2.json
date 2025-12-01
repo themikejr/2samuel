@@ -1,0 +1,14 @@
+{
+  "acaiId": "person:Ammiel.2",
+  "name": "Ammiel",
+  "description": "A man from the tribe of Simeon living during the time of Israel's united kingdom, mentioned in 2 Samuel 9:4, and father of Machir.",
+  "gender": "male",
+  "offspring": [
+    "person:Machir.2"
+  ],
+  "references": [
+    "10009004",
+    "10009005",
+    "10017027"
+  ]
+}

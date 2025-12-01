@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Heleb",
+  "name": "Heleb",
+  "description": "Heleb, also known as Heldai and Heled, was a man who lived during the time of Israel's united kingdom, first mentioned in 2 Samuel 23:29.",
+  "gender": "male",
+  "father": "person:Baanah.2",
+  "references": [
+    "10023029"
+  ]
+}

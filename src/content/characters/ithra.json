@@ -1,0 +1,16 @@
+{
+  "acaiId": "person:Ithra",
+  "name": "Ithra (Jether)",
+  "description": "An Ishmaelite also called Jether, father of Amasa, mentioned in 2 Samuel 17:25 during the time of Israel's united kingdom.",
+  "gender": "male",
+  "partners": [
+    "person:Abigail.2"
+  ],
+  "offspring": [
+    "person:Amasa"
+  ],
+  "tribe": "group:Arabia",
+  "references": [
+    "10017025"
+  ]
+}

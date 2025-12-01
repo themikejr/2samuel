@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Ahiam",
+  "name": "Ahiam",
+  "description": "A warrior from the time of Israel's united kingdom, son of Sharar, mentioned in 2 Samuel 23:33.",
+  "gender": "male",
+  "father": "person:Sharar",
+  "references": [
+    "10023033"
+  ]
+}

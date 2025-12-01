@@ -1,0 +1,25 @@
+{
+  "acaiId": "person:Jedidiah",
+  "name": "Jedidiah (Solomon)",
+  "description": "Also known as King Solomon, he was a king of the tribe of Judah during Israel's united kingdom, son of David and Bathsheba, and called Jedidiah at his birth (2 Samuel 12:25).",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:Bathsheba",
+  "partners": [
+    "person:DaughterOfPharaoh.2",
+    "person:Naamah",
+    "person:AWifeOfSolomon"
+  ],
+  "offspring": [
+    "person:Taphath",
+    "person:Basemath.2",
+    "person:Rehoboam"
+  ],
+  "tribe": "group:Judah",
+  "roles": [
+    "King"
+  ],
+  "references": [
+    "10012025"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Jashobeam",
+  "name": "Jashobeam",
+  "description": "A man living during the divided kingdom, also called Josheb-basshebeth, mentioned in 2 Samuel 23:8.",
+  "gender": "male",
+  "father": "person:Zabdiel",
+  "references": [
+    "10023008"
+  ]
+}

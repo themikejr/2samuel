@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:SonOfJashen",
+  "name": "Son of Jashen",
+  "description": "The Son of Jashen, an unnamed man mentioned in 2 Samuel 23:32, lived during the time of Israel's united kingdom and was the child of Jashen.",
+  "gender": "male",
+  "father": "person:Jashen",
+  "references": [
+    "10023032"
+  ]
+}

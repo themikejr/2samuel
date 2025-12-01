@@ -1,0 +1,18 @@
+{
+  "acaiId": "person:Jonadab.2",
+  "name": "Jonadab",
+  "description": "King David’s nephew from the tribe of Judah and a son of Shimeah.",
+  "gender": "male",
+  "father": "person:Shimeah.2",
+  "tribe": "group:Judah",
+  "roles": [
+    "Member of the Royal Family"
+  ],
+  "references": [
+    "10013003",
+    "10013005",
+    "10013032",
+    "10013035",
+    "10021021"
+  ]
+}

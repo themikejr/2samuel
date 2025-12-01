@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Ittai.2",
+  "name": "Ittai",
+  "description": "A man from the time of Israel's united kingdom, son of Ribai, mentioned as Ittai in 2 Samuel 23:29 and as Ithai in 1 Chronicles 11:31.",
+  "gender": "male",
+  "father": "person:Ribai",
+  "references": [
+    "10023029"
+  ]
+}

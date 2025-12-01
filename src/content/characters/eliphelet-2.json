@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Eliphelet.2",
+  "name": "Eliphelet",
+  "description": "Eliphelet, mentioned in 2 Samuel 23:34, was a warrior and the son of Ahasbai, who lived during the time of Israel's united kingdom under King David.",
+  "gender": "male",
+  "father": "person:Ahasbai",
+  "references": [
+    "10023034"
+  ]
+}

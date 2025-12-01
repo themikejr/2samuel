@@ -1,0 +1,18 @@
+{
+  "acaiId": "person:Ittai",
+  "name": "Ittai",
+  "description": "A Gittite and a loyal companion of King David and military commander of a third of David's forces. ",
+  "gender": "male",
+  "roles": [
+    "Military Commander",
+    "Warrior"
+  ],
+  "references": [
+    "10015019",
+    "10015021",
+    "10015022",
+    "10018002",
+    "10018005",
+    "10018012"
+  ]
+}

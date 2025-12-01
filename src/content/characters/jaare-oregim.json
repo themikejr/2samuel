@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Jaare-oregim",
+  "name": "Jaare-oregim",
+  "description": "A man living during Israel's united kingdom, father of Elhanan, mentioned in 2 Samuel 21:19.",
+  "gender": "male",
+  "offspring": [
+    "person:Elhanan"
+  ],
+  "references": [
+    "10021019"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "acaiId": "person:Gideon",
+  "name": "Gideon",
+  "description": "A son of Joash the Abiezrite from the tribe of Manasseh, who served as a judge of Israel. He was father of Jether, Abimelech, and Jotham.",
+  "gender": "male",
+  "father": "person:Joash",
+  "offspring": [
+    "person:Jether.2",
+    "person:Abimelech.2",
+    "person:Jotham"
+  ],
+  "roles": [
+    "Judge"
+  ],
+  "references": [
+    "10011021"
+  ]
+}

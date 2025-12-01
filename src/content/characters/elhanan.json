@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Elhanan",
+  "name": "Elhanan",
+  "description": "Elhanan, son of Jaare-oregim, was a warrior from Bethlehem during the time of Israel's united kingdom under King David, mentioned in 2 Samuel 21:19.",
+  "gender": "male",
+  "father": "person:Jaare-oregim",
+  "references": [
+    "10021019"
+  ]
+}

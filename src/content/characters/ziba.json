@@ -1,0 +1,25 @@
+{
+  "acaiId": "person:Ziba",
+  "name": "Ziba",
+  "description": "Servant of King Saul who assisted King David after Saul’s death.",
+  "gender": "male",
+  "roles": [
+    "Slave",
+    "Servant"
+  ],
+  "references": [
+    "10009002",
+    "10009003",
+    "10009004",
+    "10009009",
+    "10009010",
+    "10009011",
+    "10009012",
+    "10016001",
+    "10016002",
+    "10016003",
+    "10016004",
+    "10019018",
+    "10019030"
+  ]
+}

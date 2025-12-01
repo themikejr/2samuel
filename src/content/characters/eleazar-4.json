@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Eleazar.4",
+  "name": "Eleazar",
+  "description": "Eleazar, son of Dodo, was a warrior during King David's time, mentioned in 2 Samuel 23:9.",
+  "gender": "male",
+  "father": "person:Dodo.2",
+  "roles": [
+    "Warrior"
+  ],
+  "references": [
+    "10023009"
+  ]
+}

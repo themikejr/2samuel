@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Lahmi",
+  "name": "Lahmi",
+  "description": "A giant living during the time of Israel's united kingdom, mentioned in 2 Samuel 21:19 as the brother of Goliath and son of Rapha.",
+  "gender": "male",
+  "father": "person:Rapha",
+  "references": [
+    "10021016"
+  ]
+}

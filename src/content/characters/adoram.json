@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Adoram",
+  "name": "Adoram",
+  "description": "The son of Abda who was an official during the reigns of kings David, Solomon, and Rehoboam. The people killed him with stones during a rebellion against King Rehoboam.",
+  "gender": "male",
+  "father": "person:Abda",
+  "roles": [
+    "Official"
+  ],
+  "references": [
+    "10020024"
+  ]
+}

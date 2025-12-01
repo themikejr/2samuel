@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Nahash.2",
+  "name": "Nahash",
+  "description": "Nahash, a king of the Ammonites during the time of Saul and mentioned in 2 Samuel 10:2, was the father of Hanun.",
+  "gender": "male",
+  "offspring": [
+    "person:Hanun"
+  ],
+  "tribe": "group:Ammon",
+  "references": [
+    "10010002"
+  ]
+}

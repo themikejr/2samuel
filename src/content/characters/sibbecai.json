@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Sibbecai",
+  "name": "Sibbecai",
+  "description": "A Hushathite living at the time of Israel’s united kingdom who defeated a giant and subdued the Philistines.",
+  "gender": "male",
+  "roles": [
+    "Warrior"
+  ],
+  "references": [
+    "10021018",
+    "10023027"
+  ]
+}
