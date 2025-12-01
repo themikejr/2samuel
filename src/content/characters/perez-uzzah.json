@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Perez-uzzah",
+  "name": "Perez-uzzah (Uzzah)",
+  "description": "Perez-uzzah, also called Uzzah, was a man during the time of Israel's united kingdom who was involved with moving the Ark of the Covenant and mentioned in 2 Samuel 6.",
+  "gender": "male",
+  "father": "person:Abinadab",
+  "references": [
+    "10006008"
+  ]
+}

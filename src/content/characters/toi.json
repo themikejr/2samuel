@@ -1,0 +1,17 @@
+{
+  "acaiId": "person:Toi",
+  "name": "Toi",
+  "description": "Father of Joram and King of Hamath in Syria who lived during the time of King David.",
+  "gender": "male",
+  "offspring": [
+    "person:Joram.2"
+  ],
+  "tribe": "group:Syria",
+  "roles": [
+    "King"
+  ],
+  "references": [
+    "10008009",
+    "10008010"
+  ]
+}

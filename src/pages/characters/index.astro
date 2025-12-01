@@ -1,0 +1,221 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const characters = (await getCollection('characters')).sort(
+	(a, b) => a.data.name.localeCompare(b.data.name),
+);
+---
+
+<Layout title="Characters">
+	<p class="subtitle">Explore the people who appear in the book of 2 Samuel.</p>
+
+	<div class="search-container">
+		<input
+			type="text"
+			id="character-search"
+			placeholder="Search characters by name..."
+			class="search-input"
+		/>
+		<span class="search-count" id="search-count">{characters.length} characters</span>
+	</div>
+
+	<section class="characters-grid" id="characters-grid">
+		{
+			characters.map((character) => (
+				<article class="character-card" data-name={character.data.name.toLowerCase()}>
+					<a href={`/characters/${character.id}/`}>
+						<div class="character-content">
+							<h3 class="character-name">{character.data.name}</h3>
+							{character.data.roles && character.data.roles.length > 0 && (
+								<p class="character-roles">{character.data.roles.join(', ')}</p>
+							)}
+							{character.data.tribe && (
+								<p class="character-tribe">
+									Tribe of {character.data.tribe.replace('group:', '')}
+								</p>
+							)}
+							<p class="character-description">{character.data.description}</p>
+						</div>
+					</a>
+				</article>
+			))
+		}
+	</section>
+
+	<div class="no-results" id="no-results" style="display: none;">
+		<p>No characters found matching your search.</p>
+	</div>
+</Layout>
+
+<script>
+	// Client-side search functionality
+	const searchInput = document.getElementById('character-search') as HTMLInputElement;
+	const charactersGrid = document.getElementById('characters-grid') as HTMLElement;
+	const noResults = document.getElementById('no-results') as HTMLElement;
+	const searchCount = document.getElementById('search-count') as HTMLElement;
+	const characterCards = charactersGrid.querySelectorAll('.character-card');
+
+	function filterCharacters() {
+		const searchTerm = searchInput.value.toLowerCase().trim();
+		let visibleCount = 0;
+
+		characterCards.forEach((card) => {
+			const name = card.getAttribute('data-name') || '';
+			const isVisible = name.includes(searchTerm);
+
+			if (isVisible) {
+				(card as HTMLElement).style.display = 'block';
+				visibleCount++;
+			} else {
+				(card as HTMLElement).style.display = 'none';
+			}
+		});
+
+		// Update count
+		searchCount.textContent = `${visibleCount} character${visibleCount !== 1 ? 's' : ''}`;
+
+		// Show/hide no results message
+		if (visibleCount === 0) {
+			charactersGrid.style.display = 'none';
+			noResults.style.display = 'block';
+		} else {
+			charactersGrid.style.display = 'grid';
+			noResults.style.display = 'none';
+		}
+	}
+
+	searchInput.addEventListener('input', filterCharacters);
+
+	// Clear search on Escape key
+	searchInput.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') {
+			searchInput.value = '';
+			filterCharacters();
+		}
+	});
+</script>
+
+<style>
+	.subtitle {
+		margin-bottom: 2rem;
+	}
+
+	.search-container {
+		margin-bottom: 2rem;
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.search-input {
+		flex: 1;
+		min-width: 250px;
+		padding: 0.75rem 1rem;
+		font-size: 1rem;
+		border: 2px solid #e5e5e5;
+		border-radius: 8px;
+		font-family: var(--font-body);
+		transition: border-color 0.2s ease;
+	}
+
+	.search-input:focus {
+		outline: none;
+		border-color: var(--color-accent);
+	}
+
+	.search-count {
+		color: var(--color-text-light);
+		font-size: 0.9rem;
+		white-space: nowrap;
+	}
+
+	.characters-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.character-card {
+		border: 1px solid #e5e5e5;
+		border-radius: 8px;
+		overflow: hidden;
+		transition: all 0.2s ease;
+		background: white;
+	}
+
+	.character-card:hover {
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		transform: translateY(-2px);
+	}
+
+	.character-card a {
+		text-decoration: none;
+		color: inherit;
+		display: block;
+	}
+
+	.character-content {
+		padding: 1.5rem;
+	}
+
+	.character-name {
+		font-family: var(--font-display);
+		font-size: 1.3rem;
+		margin: 0 0 0.5rem 0;
+		line-height: 1.3;
+		color: var(--color-text);
+	}
+
+	.character-roles {
+		color: var(--color-accent);
+		font-size: 0.85rem;
+		font-weight: 600;
+		margin: 0 0 0.5rem 0;
+		text-transform: capitalize;
+	}
+
+	.character-tribe {
+		color: var(--color-text-light);
+		font-size: 0.85rem;
+		margin: 0 0 0.75rem 0;
+		font-style: italic;
+	}
+
+	.character-description {
+		color: var(--color-text-light);
+		line-height: 1.5;
+		margin: 0;
+		font-size: 0.95rem;
+	}
+
+	.character-card:hover .character-name {
+		color: var(--color-accent);
+	}
+
+	.no-results {
+		text-align: center;
+		padding: 3rem 1rem;
+		color: var(--color-text-light);
+	}
+
+	.no-results p {
+		font-size: 1.1rem;
+	}
+
+	@media (max-width: 768px) {
+		.characters-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.search-container {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		.search-input {
+			width: 100%;
+		}
+	}
+</style>

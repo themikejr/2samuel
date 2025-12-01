@@ -1,0 +1,19 @@
+{
+  "acaiId": "person:Ahinoam.2",
+  "name": "Ahinoam (Wife of David)",
+  "description": "A wife of King David from Jezreel. She was the mother of Amnon.",
+  "gender": "female",
+  "partners": [
+    "person:David"
+  ],
+  "offspring": [
+    "person:Amnon"
+  ],
+  "roles": [
+    "Royal Family Member"
+  ],
+  "references": [
+    "10002002",
+    "10003002"
+  ]
+}

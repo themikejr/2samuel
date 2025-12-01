@@ -1,0 +1,14 @@
+{
+  "acaiId": "person:Palti.2",
+  "name": "Palti (1 Samuel 25:44)",
+  "description": "Palti, also known as Phaltiel, son of Laish and husband of Michal, lived during the time of Israel's united kingdom and is first mentioned in 1 Samuel 25:44.",
+  "gender": "male",
+  "father": "person:Laish",
+  "partners": [
+    "person:Michal"
+  ],
+  "tribe": "group:Benjamin",
+  "references": [
+    "10003015"
+  ]
+}

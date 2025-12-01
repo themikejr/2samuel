@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Japhia.2",
+  "name": "Japhia (2 Samuel 5:15)",
+  "description": "David's son from the tribe of Judah during the time of Israel's united kingdom, mentioned in 2 Samuel 5:15.",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:JerusalemWives",
+  "tribe": "group:Judah",
+  "references": [
+    "10005015"
+  ]
+}

@@ -1,0 +1,436 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+	const characters = await getCollection('characters');
+	return characters.map((character) => ({
+		params: { slug: character.id },
+		props: { character },
+	}));
+}
+
+const { character } = Astro.props;
+const allCharacters = await getCollection('characters');
+
+// Helper function to get character by ACAI ID
+function getCharacterByAcaiId(acaiId: string) {
+	return allCharacters.find((c) => c.data.acaiId === acaiId);
+}
+
+// Helper function to format reference
+function formatReference(ref: string): { chapter: number; verse: number } {
+	// Reference format: BBCCCVVV where BB=book, CCC=chapter, VVV=verse
+	const chapter = parseInt(ref.substring(2, 5), 10);
+	const verse = parseInt(ref.substring(5, 8), 10);
+	return { chapter, verse };
+}
+
+// Helper function to link character names in text
+function linkCharacterNames(text: string): string {
+	let linkedText = text;
+
+	// Sort characters by name length (longest first) to avoid partial matches
+	const sortedCharacters = [...allCharacters].sort(
+		(a, b) => b.data.name.length - a.data.name.length
+	);
+
+	for (const char of sortedCharacters) {
+		// Skip linking the current character to itself
+		if (char.data.acaiId === character.data.acaiId) continue;
+
+		// Create regex to match the character name (case-insensitive, word boundaries)
+		// Also match names with possessive ('s)
+		const name = char.data.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // Escape special chars
+		const regex = new RegExp(`\\b${name}('s)?\\b`, 'gi');
+
+		// Replace with link (preserve original case and possessive)
+		linkedText = linkedText.replace(regex, (match) => {
+			return `<a href="/characters/${char.id}/" class="character-link">${match}</a>`;
+		});
+	}
+
+	return linkedText;
+}
+
+// Group references by chapter
+const referencesByChapter = character.data.references.reduce((acc, ref) => {
+	const { chapter, verse } = formatReference(ref);
+	if (!acc[chapter]) {
+		acc[chapter] = [];
+	}
+	acc[chapter].push(verse);
+	return acc;
+}, {} as Record<number, number[]>);
+
+// Get related characters
+const father = character.data.father ? getCharacterByAcaiId(character.data.father) : null;
+const mother = character.data.mother ? getCharacterByAcaiId(character.data.mother) : null;
+const partners = character.data.partners
+	? character.data.partners.map((p) => getCharacterByAcaiId(p)).filter(Boolean)
+	: [];
+const offspring = character.data.offspring
+	? character.data.offspring.map((o) => getCharacterByAcaiId(o)).filter(Boolean)
+	: [];
+
+// Find siblings (characters who share the same father or mother)
+const siblings = allCharacters.filter((c) => {
+	// Don't include self
+	if (c.data.acaiId === character.data.acaiId) return false;
+
+	// Check if they share a parent
+	const sharesFather = character.data.father && c.data.father === character.data.father;
+	const sharesMother = character.data.mother && c.data.mother === character.data.mother;
+
+	return sharesFather || sharesMother;
+});
+
+// Process description to link character names
+const linkedDescription = linkCharacterNames(character.data.description);
+---
+
+<Layout title={character.data.name}>
+	<article class="character-detail">
+		<div class="character-header">
+			<p class="character-meta">
+				{character.data.gender && <span class="gender">{character.data.gender}</span>}
+				{character.data.tribe && (
+					<span class="tribe">
+						Tribe of {character.data.tribe.replace('group:', '')}
+					</span>
+				)}
+			</p>
+
+			{character.data.roles && character.data.roles.length > 0 && (
+				<div class="roles">
+					{character.data.roles.map((role) => (
+						<span class="role-badge">{role}</span>
+					))}
+				</div>
+			)}
+
+			<p class="description" set:html={linkedDescription}></p>
+		</div>
+
+		{(father || mother || siblings.length > 0 || partners.length > 0 || offspring.length > 0) && (
+			<section class="family-section">
+				<h2>Family Relationships</h2>
+
+				<div class="family-tree">
+					{/* Parents */}
+					{(father || mother) && (
+						<div class="family-group">
+							<h3 class="family-label">Parents</h3>
+							<div class="family-members">
+								{father && (
+									<a href={`/characters/${father.id}/`} class="family-member">
+										<span class="relation-icon">👨</span>
+										<span class="member-name">{father.data.name}</span>
+										<span class="member-role">Father</span>
+									</a>
+								)}
+								{mother && (
+									<a href={`/characters/${mother.id}/`} class="family-member">
+										<span class="relation-icon">👩</span>
+										<span class="member-name">{mother.data.name}</span>
+										<span class="member-role">Mother</span>
+									</a>
+								)}
+							</div>
+						</div>
+					)}
+
+					{/* Siblings */}
+					{siblings.length > 0 && (
+						<div class="family-group">
+							<h3 class="family-label">
+								{siblings.length === 1 ? 'Sibling' : 'Siblings'}
+							</h3>
+							<div class="family-members">
+								{siblings.map((sibling) => (
+									<a href={`/characters/${sibling.id}/`} class="family-member">
+										<span class="relation-icon">🤝</span>
+										<span class="member-name">{sibling.data.name}</span>
+									</a>
+								))}
+							</div>
+						</div>
+					)}
+
+					{/* Partners */}
+					{partners.length > 0 && (
+						<div class="family-group">
+							<h3 class="family-label">
+								{partners.length === 1 ? 'Spouse' : 'Spouses'}
+							</h3>
+							<div class="family-members">
+								{partners.map((partner) => (
+									<a href={`/characters/${partner.id}/`} class="family-member">
+										<span class="relation-icon">💑</span>
+										<span class="member-name">{partner.data.name}</span>
+									</a>
+								))}
+							</div>
+						</div>
+					)}
+
+					{/* Offspring */}
+					{offspring.length > 0 && (
+						<div class="family-group">
+							<h3 class="family-label">
+								{offspring.length === 1 ? 'Child' : 'Children'}
+							</h3>
+							<div class="family-members">
+								{offspring.map((child) => (
+									<a href={`/characters/${child.id}/`} class="family-member">
+										<span class="relation-icon">👶</span>
+										<span class="member-name">{child.data.name}</span>
+									</a>
+								))}
+							</div>
+						</div>
+					)}
+				</div>
+			</section>
+		)}
+
+		<section class="references-section">
+			<h2>Scripture References</h2>
+			<p class="references-intro">
+				{character.data.name} appears in {character.data.references.length} verse{character.data.references.length !== 1 ? 's' : ''} across {Object.keys(referencesByChapter).length} chapter{Object.keys(referencesByChapter).length !== 1 ? 's' : ''} in 2 Samuel.
+			</p>
+
+			<div class="references-grid">
+				{Object.entries(referencesByChapter)
+					.sort(([a], [b]) => parseInt(a) - parseInt(b))
+					.map(([chapter, verses]) => (
+						<div class="chapter-references">
+							<h3 class="chapter-title">
+								<a href={`/blog/2samuel-${chapter}/`}>Chapter {chapter}</a>
+							</h3>
+							<div class="verses">
+								{verses
+									.sort((a, b) => a - b)
+									.map((verse) => (
+										<span class="verse-badge">{verse}</span>
+									))}
+							</div>
+						</div>
+					))}
+			</div>
+		</section>
+	</article>
+</Layout>
+
+<style>
+	.character-detail {
+		max-width: 800px;
+	}
+
+	.character-header {
+		margin-bottom: 3rem;
+	}
+
+	.character-meta {
+		display: flex;
+		gap: 1rem;
+		margin-bottom: 1rem;
+		font-size: 0.9rem;
+		color: var(--color-text-light);
+	}
+
+	.gender {
+		text-transform: capitalize;
+	}
+
+	.tribe {
+		font-style: italic;
+	}
+
+	.gender::before {
+		content: '•';
+		margin-right: 0.5rem;
+		color: var(--color-text-light);
+	}
+
+	.roles {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.role-badge {
+		display: inline-block;
+		padding: 0.25rem 0.75rem;
+		background: var(--color-accent);
+		color: white;
+		border-radius: 20px;
+		font-size: 0.85rem;
+		font-weight: 500;
+	}
+
+	.description {
+		font-size: 1.1rem;
+		line-height: 1.7;
+		color: var(--color-text);
+	}
+
+	.description :global(.character-link) {
+		color: var(--color-accent);
+		text-decoration: none;
+		border-bottom: 1px solid transparent;
+		transition: border-color 0.2s ease;
+	}
+
+	.description :global(.character-link:hover) {
+		border-bottom-color: var(--color-accent);
+	}
+
+	/* Family Section */
+	.family-section {
+		margin-bottom: 3rem;
+		padding: 2rem;
+		background: #f9f9f9;
+		border-radius: 8px;
+	}
+
+	.family-section h2 {
+		font-family: var(--font-display);
+		font-size: 1.8rem;
+		margin: 0 0 1.5rem 0;
+	}
+
+	.family-tree {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.family-group {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.family-label {
+		font-family: var(--font-display);
+		font-size: 1.2rem;
+		margin: 0;
+		color: var(--color-text-light);
+	}
+
+	.family-members {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.family-member {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 1rem;
+		background: white;
+		border: 2px solid #e5e5e5;
+		border-radius: 8px;
+		text-decoration: none;
+		color: var(--color-text);
+		transition: all 0.2s ease;
+		min-width: 120px;
+	}
+
+	.family-member:hover {
+		border-color: var(--color-accent);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		transform: translateY(-2px);
+	}
+
+	.relation-icon {
+		font-size: 1.5rem;
+	}
+
+	.member-name {
+		font-weight: 600;
+		text-align: center;
+		font-family: var(--font-display);
+	}
+
+	.member-role {
+		font-size: 0.85rem;
+		color: var(--color-text-light);
+		text-align: center;
+	}
+
+	/* References Section */
+	.references-section {
+		margin-bottom: 3rem;
+	}
+
+	.references-section h2 {
+		font-family: var(--font-display);
+		font-size: 1.8rem;
+		margin: 0 0 1rem 0;
+	}
+
+	.references-intro {
+		color: var(--color-text-light);
+		margin-bottom: 1.5rem;
+	}
+
+	.references-grid {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.chapter-references {
+		padding: 1.5rem;
+		background: #f9f9f9;
+		border-radius: 8px;
+		border-left: 4px solid var(--color-accent);
+	}
+
+	.chapter-title {
+		font-family: var(--font-display);
+		font-size: 1.2rem;
+		margin: 0 0 1rem 0;
+	}
+
+	.chapter-title a {
+		color: var(--color-text);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	.chapter-title a:hover {
+		color: var(--color-accent);
+	}
+
+	.verses {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.verse-badge {
+		display: inline-block;
+		padding: 0.25rem 0.5rem;
+		background: white;
+		border: 1px solid #e5e5e5;
+		border-radius: 4px;
+		font-size: 0.9rem;
+		font-weight: 500;
+		color: var(--color-text);
+	}
+
+	@media (max-width: 768px) {
+		.family-members {
+			flex-direction: column;
+		}
+
+		.family-member {
+			width: 100%;
+		}
+	}
+</style>

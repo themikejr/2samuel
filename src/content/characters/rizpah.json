@@ -1,0 +1,24 @@
+{
+  "acaiId": "person:Rizpah",
+  "name": "Rizpah",
+  "description": "A daughter of Aiah and concubine of Saul. She was the mother of Armoni and Mephibosheth.",
+  "gender": "female",
+  "father": "person:Aiah.2",
+  "partners": [
+    "person:Saul.2"
+  ],
+  "offspring": [
+    "person:Armoni",
+    "person:Mephibosheth.2"
+  ],
+  "roles": [
+    "Member of the Royal Family",
+    "Concubine"
+  ],
+  "references": [
+    "10003007",
+    "10021008",
+    "10021010",
+    "10021011"
+  ]
+}

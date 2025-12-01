@@ -1,0 +1,36 @@
+{
+  "acaiId": "person:Jonathan.3",
+  "name": "Jonathan",
+  "description": "King David’s close friend and an Israelite warrior. He was a son of King Saul by Ahinoam.",
+  "gender": "male",
+  "father": "person:Saul.2",
+  "mother": "person:Ahinoam",
+  "offspring": [
+    "person:Mephibosheth"
+  ],
+  "tribe": "group:Benjamin",
+  "roles": [
+    "Royal Family Member",
+    "Military Commander",
+    "Warrior"
+  ],
+  "references": [
+    "10001004",
+    "10001005",
+    "10001012",
+    "10001017",
+    "10001022",
+    "10001023",
+    "10001025",
+    "10001026",
+    "10004004",
+    "10009001",
+    "10009003",
+    "10009006",
+    "10009007",
+    "10021007",
+    "10021012",
+    "10021013",
+    "10021014"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "acaiId": "person:JerusalemWives",
+  "name": "Jerusalem Wives",
+  "description": "The wives of King David during Israel's united kingdom and mothers to several of his children including Eliada, Eliphalet, Elpelet, Elishama, Elishua, Ibhar, Japhia, Jerimoth, Nepheg, and Nogah.",
+  "gender": "female",
+  "partners": [
+    "person:David"
+  ],
+  "offspring": [
+    "person:Eliada",
+    "person:Eliphelet",
+    "person:Elpelet",
+    "person:Elishama.2",
+    "person:Elishua",
+    "person:Ibhar",
+    "person:Japhia.2",
+    "person:Jerimoth.6",
+    "person:Nepheg.2",
+    "person:Nogah"
+  ],
+  "tribe": "group:Judah",
+  "references": [
+    "10005013"
+  ]
+}

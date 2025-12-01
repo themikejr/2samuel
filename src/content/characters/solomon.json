@@ -1,0 +1,28 @@
+{
+  "acaiId": "person:Solomon",
+  "name": "Solomon",
+  "description": "A son of King David by Bathsheba, renowned for his wisdom and the building the First Israelite Temple in Jerusalem. He is mentioned in the family line of Jesus.",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:Bathsheba",
+  "partners": [
+    "person:DaughterOfPharaoh.2",
+    "person:Naamah",
+    "person:AWifeOfSolomon"
+  ],
+  "offspring": [
+    "person:Taphath",
+    "person:Basemath.2",
+    "person:Rehoboam"
+  ],
+  "tribe": "group:Judah",
+  "roles": [
+    "Relative of Jesus",
+    "King"
+  ],
+  "references": [
+    "10005014",
+    "10012024",
+    "10012025"
+  ]
+}

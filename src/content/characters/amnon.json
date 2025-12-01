@@ -1,0 +1,34 @@
+{
+  "acaiId": "person:Amnon",
+  "name": "Amnon",
+  "description": "The firstborn son of King David by Ahinoam. Amnon raped his half-sister, Tamar, and was killed by his half-brother Absalom.",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:Ahinoam.2",
+  "tribe": "group:Judah",
+  "roles": [
+    "Royal Family Member"
+  ],
+  "references": [
+    "10003002",
+    "10013001",
+    "10013002",
+    "10013003",
+    "10013004",
+    "10013006",
+    "10013007",
+    "10013008",
+    "10013009",
+    "10013010",
+    "10013015",
+    "10013020",
+    "10013022",
+    "10013026",
+    "10013027",
+    "10013028",
+    "10013029",
+    "10013032",
+    "10013033",
+    "10013039"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "acaiId": "person:Mephibosheth",
+  "name": "Mephibosheth",
+  "description": "Grandson of King Saul and son of Jonathan from the tribe of Benjamin. He lived during Israel’s united kingdom.",
+  "gender": "male",
+  "father": "person:Jonathan.3",
+  "offspring": [
+    "person:Micah.2"
+  ],
+  "tribe": "group:Benjamin",
+  "roles": [
+    "Royal Family Member"
+  ],
+  "references": [
+    "10004004",
+    "10009006",
+    "10009010",
+    "10009011",
+    "10009012",
+    "10009013",
+    "10016001",
+    "10016004",
+    "10019025",
+    "10019026",
+    "10019031",
+    "10021007"
+  ]
+}

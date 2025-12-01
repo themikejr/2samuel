@@ -1,0 +1,15 @@
+{
+  "acaiId": "person:Adonijah",
+  "name": "Adonijah (Son of David)",
+  "description": "One of David’s sons who tried to become king instead of his brother Solomon.",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:Haggith",
+  "tribe": "group:Judah",
+  "roles": [
+    "Royal Family Member"
+  ],
+  "references": [
+    "10003004"
+  ]
+}

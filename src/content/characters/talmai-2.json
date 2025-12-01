@@ -1,0 +1,15 @@
+{
+  "acaiId": "person:Talmai.2",
+  "name": "Talmai (2 Samuel 3:3)",
+  "description": "Talmai, mentioned in 2 Samuel 3:3, was an Ammonite king, son of Ammihud, and father of Maacah, living during the time of Israel's united kingdom.",
+  "gender": "male",
+  "father": "person:Ammihud.4",
+  "offspring": [
+    "person:Maacah.2"
+  ],
+  "tribe": "group:Ammon",
+  "references": [
+    "10003003",
+    "10013037"
+  ]
+}

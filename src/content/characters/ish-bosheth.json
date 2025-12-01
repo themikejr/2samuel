@@ -1,0 +1,25 @@
+{
+  "acaiId": "person:Ish-bosheth",
+  "name": "Ish-bosheth",
+  "description": "Son of King Saul who reigned two years over Israel, while David was king at Hebron over Judah. He was assassinated by Rechab and Baanah.",
+  "gender": "male",
+  "father": "person:Saul.2",
+  "mother": "person:Ahinoam",
+  "tribe": "group:Benjamin",
+  "roles": [
+    "Royal Family Member",
+    "King"
+  ],
+  "references": [
+    "10002008",
+    "10002010",
+    "10002012",
+    "10002015",
+    "10003008",
+    "10003014",
+    "10003015",
+    "10004005",
+    "10004008",
+    "10004012"
+  ]
+}

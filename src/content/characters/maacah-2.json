@@ -1,0 +1,16 @@
+{
+  "acaiId": "person:Maacah.2",
+  "name": "Maacah (2 Samuel 3:3)",
+  "description": "A woman from the time of Israel's united kingdom, daughter of Talmai, married to David, and mother of Absalom.",
+  "gender": "female",
+  "father": "person:Talmai.2",
+  "partners": [
+    "person:David"
+  ],
+  "offspring": [
+    "person:Absalom"
+  ],
+  "references": [
+    "10003003"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "acaiId": "person:Seraiah",
+  "name": "Seraiah",
+  "description": "He was a priest and secretary for King David.",
+  "gender": "male",
+  "offspring": [
+    "person:Elihoreph",
+    "person:Ahijah"
+  ],
+  "roles": [
+    "Priest",
+    "Scribe"
+  ],
+  "references": [
+    "10008017",
+    "10020025"
+  ]
+}

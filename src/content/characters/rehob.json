@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Rehob",
+  "name": "Rehob",
+  "description": "Rehob is a man from Zobah living during the time of Israel's united kingdom, first mentioned in 2 Samuel 8:3 as the father of Hadadezer.",
+  "gender": "male",
+  "offspring": [
+    "person:Hadadezer"
+  ],
+  "references": [
+    "10008003",
+    "10008012"
+  ]
+}

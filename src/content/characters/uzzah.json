@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Uzzah",
+  "name": "Uzzah",
+  "description": "The son of Abinadab from Kiriath-Jearim known for being killed by God for touching the ark of the covenant.",
+  "gender": "male",
+  "father": "person:Abinadab",
+  "references": [
+    "10006003",
+    "10006006",
+    "10006007",
+    "10006008"
+  ]
+}

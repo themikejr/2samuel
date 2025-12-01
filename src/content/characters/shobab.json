@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Shobab",
+  "name": "Shobab",
+  "description": "Shobab, mentioned in 2 Samuel 5:14, was a son of King David and Bathsheba, living during the time of Israel's united kingdom.",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:Bathsheba",
+  "tribe": "group:Judah",
+  "references": [
+    "10005014"
+  ]
+}

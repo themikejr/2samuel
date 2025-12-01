@@ -1,0 +1,16 @@
+{
+  "acaiId": "person:Rimmon",
+  "name": "Rimmon",
+  "description": "Rimmon, father of Baanah and Rechab, was a man living during the time of Israel's united kingdom, mentioned in 2 Samuel 4:2.",
+  "gender": "male",
+  "offspring": [
+    "person:Baanah",
+    "person:Rechab"
+  ],
+  "tribe": "group:Benjamin",
+  "references": [
+    "10004002",
+    "10004005",
+    "10004009"
+  ]
+}

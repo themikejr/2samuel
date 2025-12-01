@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Shammua.2",
+  "name": "Shammua (2 Samuel 5:14)",
+  "description": "Shammua, also called Shimea, was a son of David and Bathsheba and a brother of Solomon, living at the time of Israel's united kingdom, mentioned in 2 Samuel 5:14 and 1 Chronicles 3:5.",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:Bathsheba",
+  "tribe": "group:Judah",
+  "references": [
+    "10005014"
+  ]
+}

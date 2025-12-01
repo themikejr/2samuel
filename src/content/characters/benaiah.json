@@ -1,0 +1,22 @@
+{
+  "acaiId": "person:Benaiah",
+  "name": "Benaiah",
+  "description": "A warrior and military commander and priest during the reigns of King David and Solomon. He was the son of Jehoiada, the high priest.",
+  "gender": "male",
+  "father": "person:Jehoiada",
+  "offspring": [
+    "person:Ammizabad"
+  ],
+  "roles": [
+    "Military Commander",
+    "Army Commander",
+    "Warrior",
+    "Priest"
+  ],
+  "references": [
+    "10008018",
+    "10020023",
+    "10023020",
+    "10023022"
+  ]
+}

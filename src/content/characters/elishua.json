@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Elishua",
+  "name": "Elishua",
+  "description": "Elishua, also called Elishama, was a son of King David living during Israel's united kingdom, mentioned in 2 Samuel 5:15 and 1 Chronicles 3:6.",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:JerusalemWives",
+  "tribe": "group:Judah",
+  "references": [
+    "10005015"
+  ]
+}

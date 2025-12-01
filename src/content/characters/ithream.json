@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Ithream",
+  "name": "Ithream",
+  "description": "A son of David and Eglah, living during Israel's united kingdom, mentioned in 2 Samuel 3:5.",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:Eglah",
+  "tribe": "group:Judah",
+  "references": [
+    "10003005"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "acaiId": "person:Abinadab",
+  "name": "Abinadab (of Kiriath-jearim)",
+  "description": "Man who lived in Kiriath-Jearim. The ark of the covenant was kept at his house after it was returned by the Philistines.",
+  "gender": "male",
+  "offspring": [
+    "person:Eleazar.3",
+    "person:Uzzah",
+    "person:Ahio"
+  ],
+  "references": [
+    "10006003",
+    "10006004"
+  ]
+}

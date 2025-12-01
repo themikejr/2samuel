@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Ahimelech.3",
+  "name": "Ahimelech (Son of Abiathar)",
+  "description": "A priest living during the time of King David.",
+  "gender": "male",
+  "father": "person:Abiathar",
+  "roles": [
+    "Priest"
+  ],
+  "references": [
+    "10008017"
+  ]
+}

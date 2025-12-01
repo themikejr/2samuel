@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Eliphelet",
+  "name": "Eliphelet",
+  "description": "Eliphelet, also known as Eliphalet, was a son of King David from the tribe of Judah during Israel's united kingdom, first mentioned in 2 Samuel 5:16.",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:JerusalemWives",
+  "tribe": "group:Judah",
+  "references": [
+    "10005016"
+  ]
+}

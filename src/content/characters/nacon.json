@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Nacon",
+  "name": "Nacon",
+  "description": "Nacon, also known as Nachon, Chidon, or Kidon, was a man mentioned in 2 Samuel 6:6 and 1 Chronicles 13:9 during the time of the patriarchs.",
+  "gender": "male",
+  "father": "person:Serug",
+  "offspring": [
+    "person:Terah"
+  ],
+  "references": [
+    "10006006"
+  ]
+}

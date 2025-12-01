@@ -1,0 +1,18 @@
+{
+  "acaiId": "person:Nathan",
+  "name": "Nathan",
+  "description": "A son of King David by Bathsheba. He is listed in the family line of Jesus.",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:Bathsheba",
+  "offspring": [
+    "person:Mattatha"
+  ],
+  "tribe": "group:Judah",
+  "roles": [
+    "Royal Family Member"
+  ],
+  "references": [
+    "10005014"
+  ]
+}

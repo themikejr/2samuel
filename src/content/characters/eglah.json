@@ -1,0 +1,15 @@
+{
+  "acaiId": "person:Eglah",
+  "name": "Eglah",
+  "description": "Eglah was a woman living during Israel's united kingdom, mentioned in 2 Samuel 3:5 as a wife of David and mother of Ithream.",
+  "gender": "female",
+  "partners": [
+    "person:David"
+  ],
+  "offspring": [
+    "person:Ithream"
+  ],
+  "references": [
+    "10003005"
+  ]
+}

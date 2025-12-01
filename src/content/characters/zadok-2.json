@@ -1,0 +1,30 @@
+{
+  "acaiId": "person:Zadok.2",
+  "name": "Zadok",
+  "description": "A son of Ahitub and father of Ahimaaz, he was the high priest who anointed Solomon as king.",
+  "gender": "male",
+  "father": "person:Ahitub.2",
+  "offspring": [
+    "person:Ahimaaz.2"
+  ],
+  "tribe": "group:Levi",
+  "roles": [
+    "Priest",
+    "High Priest"
+  ],
+  "references": [
+    "10008017",
+    "10015024",
+    "10015025",
+    "10015027",
+    "10015029",
+    "10015035",
+    "10015036",
+    "10017015",
+    "10018019",
+    "10018022",
+    "10018027",
+    "10019012",
+    "10020025"
+  ]
+}

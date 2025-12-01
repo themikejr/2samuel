@@ -1,0 +1,19 @@
+{
+  "acaiId": "person:Jehoiada",
+  "name": "Jehoiada",
+  "description": "Father of the military commander Benaiah, who served under the kings David and Solomon.",
+  "gender": "male",
+  "offspring": [
+    "person:Benaiah"
+  ],
+  "roles": [
+    "Army Commander",
+    "Warrior"
+  ],
+  "references": [
+    "10008018",
+    "10020023",
+    "10023020",
+    "10023022"
+  ]
+}

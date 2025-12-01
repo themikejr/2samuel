@@ -1,0 +1,19 @@
+{
+  "acaiId": "person:Baanah",
+  "name": "Baanah",
+  "description": "A man, son of Rimmon, who murdered Saul's son Ish-Bosheth.",
+  "gender": "male",
+  "father": "person:Rimmon",
+  "tribe": "group:Benjamin",
+  "roles": [
+    "Solider",
+    "Military Commander",
+    "Warrior"
+  ],
+  "references": [
+    "10004002",
+    "10004005",
+    "10004006",
+    "10004009"
+  ]
+}

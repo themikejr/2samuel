@@ -1,0 +1,17 @@
+{
+  "acaiId": "person:Ahitub.2",
+  "name": "Ahitub (Son of Amariah)",
+  "description": "A high priest and father of Zadok from the tribe of Levi, during the time of Israel’s united kingdom.",
+  "gender": "male",
+  "father": "person:Amariah",
+  "offspring": [
+    "person:Zadok.2"
+  ],
+  "tribe": "group:Levi",
+  "roles": [
+    "Priest"
+  ],
+  "references": [
+    "10008017"
+  ]
+}

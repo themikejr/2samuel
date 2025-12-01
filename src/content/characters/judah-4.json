@@ -1,0 +1,52 @@
+{
+  "acaiId": "person:Judah.4",
+  "name": "Judah",
+  "description": "A son of the patriarch Jacob and founder of the tribe of Judah.",
+  "gender": "male",
+  "father": "person:Israel",
+  "mother": "person:Leah",
+  "partners": [
+    "person:Bath-shua",
+    "person:Tamar"
+  ],
+  "offspring": [
+    "person:Er.2",
+    "person:Onan",
+    "person:Shelah",
+    "person:Perez",
+    "person:Zerah.3"
+  ],
+  "tribe": "group:Judah",
+  "roles": [
+    "Leader",
+    "Patriarch"
+  ],
+  "references": [
+    "10001018",
+    "10002001",
+    "10002004",
+    "10002007",
+    "10002010",
+    "10002011",
+    "10003008",
+    "10003010",
+    "10005005",
+    "10011011",
+    "10012008",
+    "10019012",
+    "10019015",
+    "10019016",
+    "10019017",
+    "10019041",
+    "10019042",
+    "10019043",
+    "10019044",
+    "10020002",
+    "10020004",
+    "10020005",
+    "10021002",
+    "10024001",
+    "10024007",
+    "10024009"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "acaiId": "person:Ahio",
+  "name": "Ahio",
+  "description": "A man from the time of Israel's united kingdom, son of Abinadab and brother of Uzzah, mentioned in 2 Samuel 6:3.",
+  "gender": "male",
+  "father": "person:Abinadab",
+  "references": [
+    "10006003",
+    "10006004"
+  ]
+}

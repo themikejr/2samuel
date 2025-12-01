@@ -1,0 +1,17 @@
+{
+  "acaiId": "person:Rechab",
+  "name": "Rechab",
+  "description": "A son of the Benajmite Rimmon and brother of Baanah who lived during the time of King Saul.",
+  "gender": "male",
+  "father": "person:Rimmon",
+  "tribe": "group:Benjamin",
+  "roles": [
+    "Warrior"
+  ],
+  "references": [
+    "10004002",
+    "10004005",
+    "10004006",
+    "10004009"
+  ]
+}

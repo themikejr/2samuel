@@ -1,0 +1,20 @@
+{
+  "acaiId": "person:Ner.2",
+  "name": "Ner",
+  "description": "Father of King Saul's military commander Abner and uncle of King Saul.",
+  "gender": "male",
+  "father": "person:Abiel.2",
+  "mother": "person:Maacah.6",
+  "offspring": [
+    "person:Abner"
+  ],
+  "tribe": "group:Benjamin",
+  "references": [
+    "10002008",
+    "10002012",
+    "10003023",
+    "10003025",
+    "10003028",
+    "10003037"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Eliada",
+  "name": "Eliada",
+  "description": "Eliada, also known as Beeliada, was one of David's sons during Israel's united kingdom, mentioned in 2 Samuel 5:16 and 1 Chronicles 14:7.",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:JerusalemWives",
+  "tribe": "group:Judah",
+  "references": [
+    "10005016"
+  ]
+}

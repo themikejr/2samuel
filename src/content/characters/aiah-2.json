@@ -1,0 +1,19 @@
+{
+  "acaiId": "person:Aiah.2",
+  "name": "Aiah (Father of Rizpah)",
+  "description": "Father of Saul's concubine Rizpah.",
+  "gender": "male",
+  "offspring": [
+    "person:Rizpah"
+  ],
+  "roles": [
+    "Royal Family Member",
+    "Concubine"
+  ],
+  "references": [
+    "10003007",
+    "10021008",
+    "10021010",
+    "10021011"
+  ]
+}

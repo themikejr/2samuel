@@ -1,0 +1,25 @@
+{
+  "acaiId": "person:Nathan.2",
+  "name": "Nathan",
+  "description": "Father of Azariah and Zabud, he was a prophet and advisor of the kings David and Solomon ",
+  "gender": "male",
+  "offspring": [
+    "person:Azariah.3",
+    "person:Zabud"
+  ],
+  "roles": [
+    "Prophet"
+  ],
+  "references": [
+    "10007002",
+    "10007003",
+    "10007004",
+    "10007017",
+    "10012001",
+    "10012005",
+    "10012007",
+    "10012013",
+    "10012015",
+    "10012025"
+  ]
+}

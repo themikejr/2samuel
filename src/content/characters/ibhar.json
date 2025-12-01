@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Ibhar",
+  "name": "Ibhar",
+  "description": "A son of David, living during Israel's united kingdom, first mentioned in 2 Samuel 5:15.",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:JerusalemWives",
+  "tribe": "group:Judah",
+  "references": [
+    "10005015"
+  ]
+}

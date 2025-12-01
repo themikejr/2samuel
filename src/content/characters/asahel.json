@@ -1,0 +1,30 @@
+{
+  "acaiId": "person:Asahel",
+  "name": "Asahel",
+  "description": "One of David’s mighty men during Israel’s united kingdom. He was a son of David's sister Zeruiah, and brother of Abishai and Joab. He was also the father of Zebadiah.",
+  "gender": "male",
+  "father": "person:HusbandOfZeruiah",
+  "mother": "person:Zeruiah",
+  "offspring": [
+    "person:Zebadiah.5"
+  ],
+  "tribe": "group:Judah",
+  "roles": [
+    "Military Commander",
+    "Royal Family Member",
+    "Warrior"
+  ],
+  "references": [
+    "10002018",
+    "10002019",
+    "10002020",
+    "10002021",
+    "10002022",
+    "10002023",
+    "10002030",
+    "10002032",
+    "10003027",
+    "10003030",
+    "10023024"
+  ]
+}

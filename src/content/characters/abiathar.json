@@ -1,0 +1,26 @@
+{
+  "acaiId": "person:Abiathar",
+  "name": "Abiathar",
+  "description": "High priest during the time of King David. Later King Solomon rejected him as priest.",
+  "gender": "male",
+  "father": "person:Ahimelech",
+  "offspring": [
+    "person:Ahimelech.3",
+    "person:Jonathan.4"
+  ],
+  "roles": [
+    "Priest",
+    "High Priest"
+  ],
+  "references": [
+    "10008017",
+    "10015024",
+    "10015027",
+    "10015029",
+    "10015035",
+    "10015036",
+    "10017015",
+    "10019012",
+    "10020025"
+  ]
+}

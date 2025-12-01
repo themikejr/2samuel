@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Chileab",
+  "name": "Chileab",
+  "description": "Chileab, also called Daniel, was David's son born to him and Abigail during the time of Israel's united kingdom.",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:Abigail",
+  "tribe": "group:Judah",
+  "references": [
+    "10003003"
+  ]
+}

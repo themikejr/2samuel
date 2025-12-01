@@ -1,0 +1,63 @@
+{
+  "acaiId": "person:David",
+  "name": "David",
+  "description": "Second king of Israel, and an ancestor of Jesus. He was Jesse's youngest son and father of King Solomon.",
+  "gender": "male",
+  "father": "person:Jesse",
+  "mother": "person:Nahash.3",
+  "partners": [
+    "person:Michal",
+    "person:Abigail",
+    "person:Ahinoam.2",
+    "person:Maacah.2",
+    "person:Haggith",
+    "person:Abital",
+    "person:Eglah",
+    "person:Bathsheba",
+    "person:JerusalemWives"
+  ],
+  "offspring": [
+    "person:Amnon",
+    "person:Chileab",
+    "person:Absalom",
+    "person:Adonijah",
+    "person:Shephatiah",
+    "person:Ithream",
+    "person:Shammua.2",
+    "person:Shobab",
+    "person:Nathan",
+    "person:Solomon",
+    "person:Ibhar",
+    "person:Elishua",
+    "person:Nepheg.2",
+    "person:Japhia.2",
+    "person:Elishama.2",
+    "person:Eliada",
+    "person:Eliphelet",
+    "person:Tamar.2",
+    "person:Elpelet",
+    "person:Nogah",
+    "person:Jerimoth.6"
+  ],
+  "tribe": "group:Judah",
+  "roles": [
+    "Shepherd",
+    "Warrior",
+    "King",
+    "Relative of Jesus",
+    "Psalmist"
+  ],
+  "references": [
+    "10001001",
+    "10001002",
+    "10001003",
+    "10001004",
+    "10001005",
+    "10001011",
+    "10001013",
+    "10001014",
+    "10001015",
+    "10001016",
+    "10001017"
+  ]
+}

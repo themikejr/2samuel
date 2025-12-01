@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Shephatiah",
+  "name": "Shephatiah",
+  "description": "Shephatiah, a son of David and Abital during Israel's united kingdom, is first mentioned in 2 Samuel 3:4.",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:Abital",
+  "tribe": "group:Judah",
+  "references": [
+    "10003004"
+  ]
+}

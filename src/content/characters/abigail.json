@@ -1,0 +1,20 @@
+{
+  "acaiId": "person:Abigail",
+  "name": "Abigail",
+  "description": "Wife of Nabal and later the wife of King David.",
+  "gender": "female",
+  "partners": [
+    "person:David",
+    "person:Nabal"
+  ],
+  "offspring": [
+    "person:Chileab"
+  ],
+  "roles": [
+    "Royal Family Member"
+  ],
+  "references": [
+    "10002002",
+    "10003003"
+  ]
+}

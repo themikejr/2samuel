@@ -1,0 +1,15 @@
+{
+  "acaiId": "person:Abital",
+  "name": "Abital",
+  "description": "A woman from the time of Israel's united kingdom, wife of David and mother of Shephatiah, mentioned in 2 Samuel 3:4.",
+  "gender": "female",
+  "partners": [
+    "person:David"
+  ],
+  "offspring": [
+    "person:Shephatiah"
+  ],
+  "references": [
+    "10003004"
+  ]
+}

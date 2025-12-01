@@ -1,0 +1,15 @@
+{
+  "acaiId": "person:Jehoshaphat",
+  "name": "Jehoshaphat",
+  "description": "A son of Ahilud and one of king David’s officials. He served as a recorder during the united kingdom of Israel.",
+  "gender": "male",
+  "father": "person:Ahilud",
+  "roles": [
+    "Official",
+    "Scribe"
+  ],
+  "references": [
+    "10008016",
+    "10020024"
+  ]
+}

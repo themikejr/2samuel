@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Hiram",
+  "name": "Hiram",
+  "description": "The king of Tyre during Israel’s united kingdom, who provided materials for the kings David and Solomon.",
+  "gender": "male",
+  "tribe": "group:Syria",
+  "roles": [
+    "King"
+  ],
+  "references": [
+    "10005011"
+  ]
+}

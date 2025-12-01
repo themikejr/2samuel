@@ -1,0 +1,9 @@
+{
+  "acaiId": "person:Jashar",
+  "name": "Jashar",
+  "description": "A man who lived before Israel's monarchy, mentioned in Joshua 10:13.",
+  "gender": "male",
+  "references": [
+    "10001018"
+  ]
+}

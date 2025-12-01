@@ -1,0 +1,22 @@
+{
+  "acaiId": "person:Asher",
+  "name": "Asher",
+  "description": "Second son of the Patriarch Jacob by Zilpah, Leah's servant. He was founder of the tribe of Asher.",
+  "gender": "male",
+  "father": "person:Israel",
+  "mother": "person:Zilpah",
+  "offspring": [
+    "person:Imnah",
+    "person:Ishvah",
+    "person:Ishvi.2",
+    "person:Beriah",
+    "person:Serah"
+  ],
+  "tribe": "group:Asher",
+  "roles": [
+    "Patriarch"
+  ],
+  "references": [
+    "10002009"
+  ]
+}

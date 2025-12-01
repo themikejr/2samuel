@@ -1,0 +1,25 @@
+{
+  "acaiId": "person:Michal",
+  "name": "Michal",
+  "description": "A daughter of King Saul and wife of David, and later the wife of Palti.",
+  "gender": "female",
+  "father": "person:Saul.2",
+  "mother": "person:Ahinoam",
+  "partners": [
+    "person:David",
+    "person:Palti.2"
+  ],
+  "tribe": "group:Benjamin",
+  "roles": [
+    "Royal Family Member",
+    "Queen"
+  ],
+  "references": [
+    "10003013",
+    "10003014",
+    "10006016",
+    "10006020",
+    "10006021",
+    "10006023"
+  ]
+}

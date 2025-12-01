@@ -1,0 +1,19 @@
+{
+  "acaiId": "person:Haggith",
+  "name": "Haggith",
+  "description": "Haggith was a wife of King David and the mother of his fourth son Adonijah.",
+  "gender": "female",
+  "partners": [
+    "person:David"
+  ],
+  "offspring": [
+    "person:Adonijah"
+  ],
+  "roles": [
+    "Royal Family Member",
+    "Matriarch"
+  ],
+  "references": [
+    "10003004"
+  ]
+}

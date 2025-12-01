@@ -1,0 +1,27 @@
+{
+  "acaiId": "person:Obed-edom",
+  "name": "Obed-edom",
+  "description": "A Gittite in whose house the ark of the covenat was stored during King David's reign.",
+  "gender": "male",
+  "father": "person:Jeduthun",
+  "offspring": [
+    "person:Shemaiah.9",
+    "person:Jehozabad.2",
+    "person:Joah.3",
+    "person:Sachar",
+    "person:Nethanel.5",
+    "person:Ammiel.3",
+    "person:Issachar.2",
+    "person:Peullethai"
+  ],
+  "tribe": "group:Levi",
+  "roles": [
+    "Official",
+    "Priest"
+  ],
+  "references": [
+    "10006010",
+    "10006011",
+    "10006012"
+  ]
+}

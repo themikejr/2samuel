@@ -1,0 +1,17 @@
+{
+  "acaiId": "person:Ahilud",
+  "name": "Ahilud",
+  "description": "An official (and perhaps a recorder) during the reign of King David. He was the father of Jehoshaphat.",
+  "gender": "male",
+  "offspring": [
+    "person:Jehoshaphat",
+    "person:Baana"
+  ],
+  "roles": [
+    "Official"
+  ],
+  "references": [
+    "10008016",
+    "10020024"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "acaiId": "person:Hadadezer",
+  "name": "Hadadezer",
+  "description": "A king of Zobah and son of Rehob, who lived during the time of Israel’s united kingdom.",
+  "gender": "male",
+  "father": "person:Rehob",
+  "tribe": "group:Syria",
+  "roles": [
+    "Military Commander",
+    "King"
+  ],
+  "references": [
+    "10008003",
+    "10008005",
+    "10008007",
+    "10008008",
+    "10008009",
+    "10008010",
+    "10008012",
+    "10010016",
+    "10010019"
+  ]
+}
