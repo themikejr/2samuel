@@ -92,15 +92,25 @@ const linkedDescription = linkCharacterNames(character.data.description);
 <Layout title={character.data.name}>
 	<article class="character-detail">
 		<div class="character-header">
-			<p class="character-meta">
-				{character.data.gender && <span class="gender">{character.data.gender}</span>}
-				{character.data.tribe && (
-					<span class="tribe">
-						Tribe of {character.data.tribe.replace('group:', '')}
-					</span>
-				)}
-			</p>
+			{/* Metadata badges */}
+			{(character.data.gender || character.data.tribe) && (
+				<div class="metadata-badges">
+					{character.data.gender && (
+						<span class="metadata-badge">
+							<span class="metadata-label">Gender</span>
+							<span class="metadata-value">{character.data.gender}</span>
+						</span>
+					)}
+					{character.data.tribe && (
+						<span class="metadata-badge">
+							<span class="metadata-label">Tribe</span>
+							<span class="metadata-value">{character.data.tribe.replace('group:', '')}</span>
+						</span>
+					)}
+				</div>
+			)}
 
+			{/* Role badges */}
 			{character.data.roles && character.data.roles.length > 0 && (
 				<div class="roles">
 					{character.data.roles.map((role) => (
@@ -144,7 +154,7 @@ const linkedDescription = linkCharacterNames(character.data.description);
 					{siblings.length > 0 && (
 						<div class="family-group">
 							<h3 class="family-label">
-								{siblings.length === 1 ? 'Sibling' : 'Siblings'}
+								{siblings.length === 1 ? 'Sibling' : `Siblings (${siblings.length})`}
 							</h3>
 							<div class="family-members">
 								{siblings.map((sibling) => (
@@ -161,7 +171,7 @@ const linkedDescription = linkCharacterNames(character.data.description);
 					{partners.length > 0 && (
 						<div class="family-group">
 							<h3 class="family-label">
-								{partners.length === 1 ? 'Spouse' : 'Spouses'}
+								{partners.length === 1 ? 'Spouse' : `Spouses (${partners.length})`}
 							</h3>
 							<div class="family-members">
 								{partners.map((partner) => (
@@ -178,7 +188,7 @@ const linkedDescription = linkCharacterNames(character.data.description);
 					{offspring.length > 0 && (
 						<div class="family-group">
 							<h3 class="family-label">
-								{offspring.length === 1 ? 'Child' : 'Children'}
+								{offspring.length === 1 ? 'Child' : `Children (${offspring.length})`}
 							</h3>
 							<div class="family-members">
 								{offspring.map((child) => (
@@ -231,28 +241,39 @@ const linkedDescription = linkCharacterNames(character.data.description);
 		margin-bottom: 3rem;
 	}
 
-	.character-meta {
+	/* Metadata badges */
+	.metadata-badges {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 1rem;
-		margin-bottom: 1rem;
-		font-size: 0.9rem;
-		color: var(--color-text-light);
+		margin-bottom: 1.5rem;
 	}
 
-	.gender {
+	.metadata-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem 0.75rem;
+		background: #f5f5f5;
+		border-radius: 6px;
+		font-size: 0.9rem;
+	}
+
+	.metadata-label {
+		color: var(--color-text-light);
+		font-weight: 500;
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.metadata-value {
+		color: var(--color-text);
+		font-weight: 600;
 		text-transform: capitalize;
 	}
 
-	.tribe {
-		font-style: italic;
-	}
-
-	.gender::before {
-		content: '•';
-		margin-right: 0.5rem;
-		color: var(--color-text-light);
-	}
-
+	/* Role badges */
 	.roles {
 		display: flex;
 		flex-wrap: wrap;
