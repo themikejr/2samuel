@@ -91,9 +91,25 @@ const characters = (await getCollection('characters')).sort(
 		return 0;
 	}
 
-	function filterCharacters() {
+	// Update URL with search query parameter
+	function updateURL(searchTerm: string) {
+		const url = new URL(window.location.href);
+		if (searchTerm) {
+			url.searchParams.set('q', searchTerm);
+		} else {
+			url.searchParams.delete('q');
+		}
+		window.history.replaceState({}, '', url);
+	}
+
+	function filterCharacters(updateUrl = true) {
 		const searchTerm = searchInput.value.trim();
 		let visibleCount = 0;
+
+		// Update URL if requested
+		if (updateUrl) {
+			updateURL(searchTerm);
+		}
 
 		// Calculate scores and filter
 		const cardsWithScores = characterCards.map((card) => {
@@ -132,15 +148,28 @@ const characters = (await getCollection('characters')).sort(
 		}
 	}
 
-	searchInput.addEventListener('input', filterCharacters);
+	// Initialize from URL query parameter on page load
+	function initializeFromURL() {
+		const urlParams = new URLSearchParams(window.location.search);
+		const query = urlParams.get('q');
+		if (query) {
+			searchInput.value = query;
+			filterCharacters(false); // Don't update URL on initial load
+		}
+	}
+
+	searchInput.addEventListener('input', () => filterCharacters(true));
 
 	// Clear search on Escape key
 	searchInput.addEventListener('keydown', (e) => {
 		if (e.key === 'Escape') {
 			searchInput.value = '';
-			filterCharacters();
+			filterCharacters(true);
 		}
 	});
+
+	// Initialize on page load
+	initializeFromURL();
 </script>
 
 <style>
