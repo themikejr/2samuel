@@ -46,6 +46,15 @@ const characters = (await getCollection('characters')).sort(
 	<div class="no-results" id="no-results" style="display: none;">
 		<p>No characters found matching your search.</p>
 	</div>
+
+	<div class="data-attribution">
+		<p>
+			Character data provided by
+			<a href="https://github.com/BibleAquifer/ACAI" target="_blank" rel="noopener">ACAI Biblical Entity Data</a>,
+			licensed under
+			<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.
+		</p>
+	</div>
 </Layout>
 
 <script>
@@ -54,18 +63,56 @@ const characters = (await getCollection('characters')).sort(
 	const charactersGrid = document.getElementById('characters-grid') as HTMLElement;
 	const noResults = document.getElementById('no-results') as HTMLElement;
 	const searchCount = document.getElementById('search-count') as HTMLElement;
-	const characterCards = charactersGrid.querySelectorAll('.character-card');
+	const characterCards = Array.from(charactersGrid.querySelectorAll('.character-card'));
+
+	// Calculate relevance score for ranking
+	function getRelevanceScore(name: string, searchTerm: string): number {
+		if (!searchTerm) return 0;
+
+		const lowerName = name.toLowerCase();
+		const lowerSearch = searchTerm.toLowerCase();
+
+		// Extract main name (before parentheses)
+		const mainName = name.split('(')[0].trim().toLowerCase();
+
+		// Exact match (highest priority)
+		if (lowerName === lowerSearch || mainName === lowerSearch) return 1000;
+
+		// Starts with search term
+		if (lowerName.startsWith(lowerSearch)) return 900;
+		if (mainName.startsWith(lowerSearch)) return 800;
+
+		// Match in main name (before parentheses)
+		if (mainName.includes(lowerSearch)) return 700;
+
+		// Match anywhere in full name
+		if (lowerName.includes(lowerSearch)) return 600;
+
+		return 0;
+	}
 
 	function filterCharacters() {
-		const searchTerm = searchInput.value.toLowerCase().trim();
+		const searchTerm = searchInput.value.trim();
 		let visibleCount = 0;
 
-		characterCards.forEach((card) => {
+		// Calculate scores and filter
+		const cardsWithScores = characterCards.map((card) => {
 			const name = card.getAttribute('data-name') || '';
-			const isVisible = name.includes(searchTerm);
+			const score = getRelevanceScore(name, searchTerm);
+			return { card, score, name };
+		});
 
-			if (isVisible) {
+		// Sort by score (highest first), then alphabetically
+		cardsWithScores.sort((a, b) => {
+			if (b.score !== a.score) return b.score - a.score;
+			return a.name.localeCompare(b.name);
+		});
+
+		// Show/hide and reorder
+		cardsWithScores.forEach(({ card, score }) => {
+			if (score > 0 || !searchTerm) {
 				(card as HTMLElement).style.display = 'block';
+				charactersGrid.appendChild(card); // Move to maintain order
 				visibleCount++;
 			} else {
 				(card as HTMLElement).style.display = 'none';
@@ -202,6 +249,28 @@ const characters = (await getCollection('characters')).sort(
 
 	.no-results p {
 		font-size: 1.1rem;
+	}
+
+	.data-attribution {
+		margin-top: 3rem;
+		padding-top: 2rem;
+		border-top: 1px solid #e5e5e5;
+		text-align: center;
+	}
+
+	.data-attribution p {
+		color: var(--color-text-light);
+		font-size: 0.85rem;
+		margin: 0;
+	}
+
+	.data-attribution a {
+		color: var(--color-accent);
+		text-decoration: none;
+	}
+
+	.data-attribution a:hover {
+		text-decoration: underline;
 	}
 
 	@media (max-width: 768px) {

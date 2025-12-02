@@ -269,6 +269,15 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 					))}
 			</div>
 		</section>
+
+		<div class="data-attribution">
+			<p>
+				Character data provided by
+				<a href="https://github.com/BibleAquifer/ACAI" target="_blank" rel="noopener">ACAI Biblical Entity Data</a>,
+				licensed under
+				<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.
+			</p>
+		</div>
 	</article>
 </Layout>
 
@@ -483,6 +492,28 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 		font-size: 0.9rem;
 		font-weight: 500;
 		color: var(--color-text);
+	}
+
+	.data-attribution {
+		margin-top: 3rem;
+		padding-top: 2rem;
+		border-top: 1px solid #e5e5e5;
+		text-align: center;
+	}
+
+	.data-attribution p {
+		color: var(--color-text-light);
+		font-size: 0.85rem;
+		margin: 0;
+	}
+
+	.data-attribution a {
+		color: var(--color-accent);
+		text-decoration: none;
+	}
+
+	.data-attribution a:hover {
+		text-decoration: underline;
 	}
 
 	@media (max-width: 768px) {
