@@ -1,0 +1,26 @@
+{
+  "acaiId": "person:Kedar",
+  "name": "Kedar",
+  "description": "A son of the patriarch Ishmael.",
+  "gender": "male",
+  "father": "person:Ishmael",
+  "tribe": "group:Arabia",
+  "roles": [
+    "Military Commander",
+    "Leader",
+    "Patriarch"
+  ],
+  "references": [
+    "01025013",
+    "13001029",
+    "19120005",
+    "22001005",
+    "23021016",
+    "23021017",
+    "23042011",
+    "23060007",
+    "24002010",
+    "24049028",
+    "26027021"
+  ]
+}

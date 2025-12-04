@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Mishma",
+  "name": "Mishma",
+  "description": "Mishma was a son of Ishmael and an Arab living during the time of the patriarchs.",
+  "gender": "male",
+  "father": "person:Ishmael",
+  "tribe": "group:Arabia",
+  "references": [
+    "01025014",
+    "13001030"
+  ]
+}

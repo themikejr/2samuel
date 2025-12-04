@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Adbeel",
+  "name": "Adbeel",
+  "description": "A man living at the time of the patriarchs, son of Ishmael and brother to many, mentioned in Genesis 25:13.",
+  "gender": "male",
+  "father": "person:Ishmael",
+  "tribe": "group:Arabia",
+  "references": [
+    "01025013",
+    "13001029"
+  ]
+}

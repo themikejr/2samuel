@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Pithon",
+  "name": "Pithon",
+  "description": "Pithon was a man of the tribe of Benjamin living during the time of Israel's united kingdom, mentioned in 1 Chronicles 8:35.",
+  "gender": "male",
+  "father": "person:Micah.2",
+  "tribe": "group:Benjamin",
+  "references": [
+    "13008035",
+    "13009041"
+  ]
+}

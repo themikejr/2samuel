@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Ahijah",
+  "name": "Ahijah",
+  "description": "A secretary for King Solomon and son of Shisha during Israel's united kingdom.",
+  "gender": "male",
+  "father": "person:Seraiah",
+  "references": [
+    "11004003"
+  ]
+}

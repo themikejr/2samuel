@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Areli",
+  "name": "Areli",
+  "description": "A man of the tribe of Gad living during the time of Egypt and the wilderness, mentioned in Genesis 46:16.",
+  "gender": "male",
+  "father": "person:Gad",
+  "tribe": "group:Gad",
+  "references": [
+    "01046016",
+    "04026017"
+  ]
+}

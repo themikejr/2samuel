@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Nethanel.2",
+  "name": "Nethanel (1 Chronicles 2:14)",
+  "description": "Nethanel, also known as Nethaneel, was a son of Jesse and brother of David, living during the time of Israel's united kingdom, mentioned in 1 Chronicles 2:14.",
+  "gender": "male",
+  "father": "person:Jesse",
+  "mother": "person:Nahash.3",
+  "tribe": "group:Judah",
+  "references": [
+    "13002014"
+  ]
+}

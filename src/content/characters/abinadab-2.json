@@ -1,0 +1,19 @@
+{
+  "acaiId": "person:Abinadab.2",
+  "name": "Abinadab (Son of Saul)",
+  "description": "Son of King Saul.",
+  "gender": "male",
+  "father": "person:Saul.2",
+  "mother": "person:Ahinoam",
+  "tribe": "group:Benjamin",
+  "roles": [
+    "Royal Family Member"
+  ],
+  "references": [
+    "09014049",
+    "09031002",
+    "13008033",
+    "13009039",
+    "13010002"
+  ]
+}

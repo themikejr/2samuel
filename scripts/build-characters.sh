@@ -7,10 +7,11 @@
 #
 # Process:
 # 1. Create character files from ACAI data
-# 2. Clean character names (remove scripture disambiguations)
-# 3. Fix known name collisions (e.g., Nathan)
-# 4. Remove background/non-narrative characters
-# 5. Report final status and any remaining issues
+# 2. Add family members of characters with 2 Samuel references
+# 3. Clean character names (remove scripture disambiguations)
+# 4. Fix known name collisions (e.g., Nathan)
+# 5. Remove background/non-narrative characters
+# 6. Report final status and any remaining issues
 
 set -e  # Exit on error
 
@@ -32,30 +33,37 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 "$SCRIPT_DIR/create-all-characters.sh" "$START_CHAPTER" "$END_CHAPTER"
 echo ""
 
-# Step 2: Clean character names
+# Step 2: Add family members
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "STEP 2: Cleaning character names"
+echo "STEP 2: Adding family members of 2 Samuel characters"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+"$SCRIPT_DIR/add-family-members.sh"
+echo ""
+
+# Step 3: Clean character names
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "STEP 3: Cleaning character names"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 "$SCRIPT_DIR/clean-character-names.sh"
 echo ""
 
-# Step 3: Fix known name collisions
+# Step 4: Fix known name collisions
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "STEP 3: Fixing known name collisions"
+echo "STEP 4: Fixing known name collisions"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 "$SCRIPT_DIR/fix-nathan-disambiguation.sh"
 echo ""
 
-# Step 4: Remove background characters
+# Step 5: Remove background characters
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "STEP 4: Removing background/non-narrative characters"
+echo "STEP 5: Removing background/non-narrative characters"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 "$SCRIPT_DIR/remove-background-characters.sh"
 echo ""
 
-# Step 5: Final report
+# Step 6: Final report
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "STEP 5: Final validation"
+echo "STEP 6: Final validation"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 "$SCRIPT_DIR/check-name-collisions.sh"
 echo ""

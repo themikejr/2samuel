@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Raddai",
+  "name": "Raddai",
+  "description": "Raddai is David's brother, from the tribe of Judah, mentioned in 1 Chronicles 2:14, who lived during Israel's united kingdom.",
+  "gender": "male",
+  "father": "person:Jesse",
+  "mother": "person:Nahash.3",
+  "tribe": "group:Judah",
+  "references": [
+    "13002014"
+  ]
+}

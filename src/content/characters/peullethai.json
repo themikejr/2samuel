@@ -1,0 +1,11 @@
+{
+  "acaiId": "person:Peullethai",
+  "name": "Peullethai",
+  "description": "Peullethai, also known as Peulthai and mentioned in 1 Chronicles 26:5, was a Levite during the time of Israel's united kingdom, the son of Obed-edom, and brother to Shemaiah, Jehozabad, Joah, Sachar, Nethanel, Issachar, and Ammiel.",
+  "gender": "male",
+  "father": "person:Obed-edom",
+  "tribe": "group:Levi",
+  "references": [
+    "13026005"
+  ]
+}

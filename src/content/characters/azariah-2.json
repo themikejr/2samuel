@@ -1,0 +1,15 @@
+{
+  "acaiId": "person:Azariah.2",
+  "name": "Azariah (1 Kings 4:2)",
+  "description": "A priest from the tribe of Levi during Israel's united kingdom, mentioned in 1 Kings 4:2.",
+  "gender": "male",
+  "father": "person:Ahimaaz.2",
+  "offspring": [
+    "person:Johanan.7"
+  ],
+  "tribe": "group:Levi",
+  "references": [
+    "11004002",
+    "13005035"
+  ]
+}

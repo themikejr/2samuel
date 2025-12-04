@@ -1,0 +1,23 @@
+{
+  "acaiId": "person:Eliab.3",
+  "name": "Eliab (Son of Jesse)",
+  "description": "First-born son of Jesse, member of Saul's army, and King David’s oldest brother.",
+  "gender": "male",
+  "father": "person:Jesse",
+  "mother": "person:Nahash.3",
+  "offspring": [
+    "person:Abihail.4"
+  ],
+  "tribe": "group:Judah",
+  "roles": [
+    "Royal Family Member",
+    "Warrior"
+  ],
+  "references": [
+    "09016006",
+    "09017013",
+    "09017028",
+    "13002013",
+    "14011018"
+  ]
+}

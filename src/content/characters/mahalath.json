@@ -1,0 +1,26 @@
+{
+  "acaiId": "person:Mahalath",
+  "name": "Mahalath",
+  "description": "A daughter of the patriarch Ishmael and wife of Esau.",
+  "gender": "female",
+  "father": "person:Ishmael",
+  "partners": [
+    "person:Esau"
+  ],
+  "offspring": [
+    "person:Reuel.3"
+  ],
+  "tribe": "group:Arabia",
+  "roles": [
+    "Concubine",
+    "Matriarch"
+  ],
+  "references": [
+    "01028009",
+    "01036003",
+    "01036004",
+    "01036010",
+    "01036013",
+    "01036017"
+  ]
+}

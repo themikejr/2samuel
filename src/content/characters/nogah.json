@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Nogah",
+  "name": "Nogah",
+  "description": "Nogah was a son of David from the tribe of Judah during Israel's united kingdom, first mentioned in 1 Chronicles 3:7.",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:JerusalemWives",
+  "tribe": "group:Judah",
+  "references": [
+    "13003007",
+    "13014006"
+  ]
+}

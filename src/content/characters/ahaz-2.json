@@ -1,0 +1,16 @@
+{
+  "acaiId": "person:Ahaz.2",
+  "name": "Ahaz (1 Chronicles 8:35)",
+  "description": "A man from the tribe of Benjamin during Israel's united kingdom, son of Micah and father of Jehoaddah.",
+  "gender": "male",
+  "father": "person:Micah.2",
+  "offspring": [
+    "person:Jehoaddah"
+  ],
+  "tribe": "group:Benjamin",
+  "references": [
+    "13008035",
+    "13008036",
+    "13009042"
+  ]
+}

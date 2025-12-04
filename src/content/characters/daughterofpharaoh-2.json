@@ -1,0 +1,15 @@
+{
+  "acaiId": "person:DaughterOfPharaoh.2",
+  "name": "Daughter of Pharaoh (1 Kings 3:1)",
+  "description": "The Daughter of Pharaoh, mentioned in 1 Kings 3:1, was an unnamed Egyptian woman who married King Solomon during Israel's united kingdom period.",
+  "gender": "female",
+  "father": "person:Pharaoh.7",
+  "mother": "person:Tahpenes",
+  "partners": [
+    "person:Solomon"
+  ],
+  "tribe": "group:Egypt",
+  "references": [
+    "11003001"
+  ]
+}

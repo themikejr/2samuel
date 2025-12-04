@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Ezbon",
+  "name": "Ezbon",
+  "description": "Ezbon, also known as Ozni, was a man of the tribe of Gad, son of Gad, living during the time of Egypt and the wilderness, and first mentioned in Genesis 46:16.",
+  "gender": "male",
+  "father": "person:Gad",
+  "tribe": "group:Gad",
+  "references": [
+    "01046016",
+    "04026016"
+  ]
+}

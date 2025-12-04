@@ -1,0 +1,29 @@
+{
+  "acaiId": "person:Bilhah",
+  "name": "Bilhah",
+  "description": "The slave of the matriarch Rachel who was given to the patriarch Jacob as a concubine. She was the mother of Jacob's sons Dan and Napthali.",
+  "gender": "female",
+  "partners": [
+    "person:Israel"
+  ],
+  "offspring": [
+    "person:Dan",
+    "person:Naphtali"
+  ],
+  "roles": [
+    "Slave",
+    "Concubine"
+  ],
+  "references": [
+    "01029029",
+    "01030003",
+    "01030004",
+    "01030005",
+    "01030007",
+    "01035022",
+    "01035025",
+    "01037002",
+    "01046025",
+    "13007013"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Dumah",
+  "name": "Dumah",
+  "description": "Dumah, son of Ishmael and grandson of Abraham, was an Arab living at the time of the patriarchs, mentioned in Genesis 25:14.",
+  "gender": "male",
+  "father": "person:Ishmael",
+  "tribe": "group:Arabia",
+  "references": [
+    "01025014",
+    "13001030"
+  ]
+}

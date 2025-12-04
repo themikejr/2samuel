@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Zabud",
+  "name": "Zabud",
+  "description": "Zabud was a man living during Israel's united kingdom, the son of Nathan, and an adviser to King David, mentioned in 1 Kings 4:5.",
+  "gender": "male",
+  "father": "person:Nathan.2",
+  "references": [
+    "11004005"
+  ]
+}

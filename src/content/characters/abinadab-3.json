@@ -1,0 +1,17 @@
+{
+  "acaiId": "person:Abinadab.3",
+  "name": "Abinadab (Son of Jesse)",
+  "description": "Second son of Jesse, and brother of King David.",
+  "gender": "male",
+  "father": "person:Jesse",
+  "mother": "person:Nahash.3",
+  "tribe": "group:Judah",
+  "roles": [
+    "Royal Family Member"
+  ],
+  "references": [
+    "09016008",
+    "09017013",
+    "13002013"
+  ]
+}

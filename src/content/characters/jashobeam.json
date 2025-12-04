@@ -5,6 +5,8 @@
   "gender": "male",
   "father": "person:Zabdiel",
   "references": [
-    "10023008"
+    "10023008",
+    "13011011",
+    "13027002"
   ]
 }

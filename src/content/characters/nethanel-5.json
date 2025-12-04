@@ -1,0 +1,11 @@
+{
+  "acaiId": "person:Nethanel.5",
+  "name": "Nethanel (1 Chronicles 26:4)",
+  "description": "Nethanel, also known as Nethaneel, was a Levite and son of Obed-Edom during the time of Israel's united kingdom, mentioned in 1 Chronicles 26:4.",
+  "gender": "male",
+  "father": "person:Obed-edom",
+  "tribe": "group:Levi",
+  "references": [
+    "13026004"
+  ]
+}

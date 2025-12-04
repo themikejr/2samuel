@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Tema",
+  "name": "Tema",
+  "description": "Tema was an Arab man living at the time of the patriarchs, a son of Ishmael, mentioned in Genesis 25:15.",
+  "gender": "male",
+  "father": "person:Ishmael",
+  "tribe": "group:Arabia",
+  "references": [
+    "01025015",
+    "13001030"
+  ]
+}

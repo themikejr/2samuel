@@ -1,0 +1,11 @@
+{
+  "acaiId": "person:Jehozabad.2",
+  "name": "Jehozabad (1 Chronicles 26:4)",
+  "description": "A Levite man from the tribe of Levi during the united kingdom of Israel, son of Obed-Edom, and mentioned in 1 Chronicles 26:4.",
+  "gender": "male",
+  "father": "person:Obed-edom",
+  "tribe": "group:Levi",
+  "references": [
+    "13026004"
+  ]
+}

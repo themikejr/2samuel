@@ -5,6 +5,7 @@
   "gender": "male",
   "father": "person:Toi",
   "references": [
-    "10008010"
+    "10008010",
+    "13018010"
   ]
 }

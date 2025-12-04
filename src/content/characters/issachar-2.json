@@ -1,0 +1,11 @@
+{
+  "acaiId": "person:Issachar.2",
+  "name": "Issachar (1 Chronicles 26:5)",
+  "description": "A Levite gatekeeper during the time of Israel's united kingdom, mentioned in 1 Chronicles 26:5.",
+  "gender": "male",
+  "father": "person:Obed-edom",
+  "tribe": "group:Levi",
+  "references": [
+    "13026005"
+  ]
+}

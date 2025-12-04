@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Kedemah",
+  "name": "Kedemah",
+  "description": "A man of the Arabs, son of Ishmael, mentioned in Genesis 25:15, also called Nodab in 1 Chronicles 5:19.",
+  "gender": "male",
+  "father": "person:Ishmael",
+  "tribe": "group:Arabia",
+  "references": [
+    "01025015",
+    "13001031",
+    "13005019"
+  ]
+}

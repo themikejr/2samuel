@@ -72,7 +72,7 @@ for person_id in $people; do
     offspring: .offspring,
     tribe: .tribe,
     roles: .roles,
-    references: [.references[] | select(startswith("10"))]
+    references: .references
   } |
   # Remove null values
   with_entries(select(.value != null))

@@ -1,0 +1,16 @@
+{
+  "acaiId": "person:Segub.2",
+  "name": "Segub (1 Chronicles 2:21)",
+  "description": "Segub, mentioned in 1 Chronicles 2:21, was a man from the tribe of Judah before Israel's Monarchy and the father of Jair.",
+  "gender": "male",
+  "father": "person:Hezron.2",
+  "mother": "person:DaughterOfMachir",
+  "offspring": [
+    "person:Jair.2"
+  ],
+  "tribe": "group:Judah",
+  "references": [
+    "13002021",
+    "13002022"
+  ]
+}

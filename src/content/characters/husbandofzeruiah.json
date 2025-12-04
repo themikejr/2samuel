@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:HusbandOfZeruiah",
+  "name": "Husband of Zeruiah",
+  "description": "The unnamed husband of Zeruiah, who lived during the time of Israel's united kingdom.",
+  "gender": "male",
+  "partners": [
+    "person:Zeruiah"
+  ],
+  "references": [
+    "09026006"
+  ]
+}

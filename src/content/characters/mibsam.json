@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Mibsam",
+  "name": "Mibsam",
+  "description": "Mibsam, an Arab living during the time of the patriarchs, is the son of Ishmael and is first mentioned in Genesis 25:13.",
+  "gender": "male",
+  "father": "person:Ishmael",
+  "tribe": "group:Arabia",
+  "references": [
+    "01025013",
+    "13001029"
+  ]
+}

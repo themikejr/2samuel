@@ -1,0 +1,15 @@
+{
+  "acaiId": "person:Amariah",
+  "name": "Amariah",
+  "description": "A priest of the tribe of Levi living during Israel's united kingdom, son of Meraioth and father of Ahitub, mentioned in 1 Chronicles 6:7.",
+  "gender": "male",
+  "father": "person:Meraioth",
+  "offspring": [
+    "person:Ahitub.2"
+  ],
+  "tribe": "group:Levi",
+  "references": [
+    "13005033",
+    "13006037"
+  ]
+}

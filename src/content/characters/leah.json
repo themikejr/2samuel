@@ -1,0 +1,58 @@
+{
+  "acaiId": "person:Leah",
+  "name": "Leah",
+  "description": "A daughter of Laban and first wife of the patriarch Jacob, she was the older sister of the matriarch Rachel. Leah was mother to several of the patriarchs of the tribes of Israel, including Judah, the ancestor of Jesus.",
+  "gender": "female",
+  "father": "person:Laban",
+  "partners": [
+    "person:Israel"
+  ],
+  "offspring": [
+    "person:Reuben",
+    "person:Simeon.5",
+    "person:Levi.3",
+    "person:Judah.4",
+    "person:Issachar",
+    "person:Zebulun",
+    "person:Dinah"
+  ],
+  "tribe": "group:Earlypatriarchs",
+  "roles": [
+    "Relative of Jesus",
+    "Matriarch"
+  ],
+  "references": [
+    "01029016",
+    "01029017",
+    "01029023",
+    "01029024",
+    "01029025",
+    "01029030",
+    "01029031",
+    "01029032",
+    "01030009",
+    "01030010",
+    "01030011",
+    "01030012",
+    "01030013",
+    "01030014",
+    "01030016",
+    "01030017",
+    "01030018",
+    "01030019",
+    "01030020",
+    "01031004",
+    "01031014",
+    "01031033",
+    "01033001",
+    "01033002",
+    "01033007",
+    "01034001",
+    "01035023",
+    "01035026",
+    "01046015",
+    "01046018",
+    "01049031",
+    "08004011"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "acaiId": "person:Nebaioth",
+  "name": "Nebaioth",
+  "description": "First-born son of the patriarch Ishmael.",
+  "gender": "male",
+  "father": "person:Ishmael",
+  "tribe": "group:Arabia",
+  "roles": [
+    "Leader",
+    "Patriarch"
+  ],
+  "references": [
+    "01025013",
+    "01028009",
+    "01036003",
+    "13001029",
+    "23060007"
+  ]
+}

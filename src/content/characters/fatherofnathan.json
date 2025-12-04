@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:FatherOfNathan",
+  "name": "Father of Nathan",
+  "description": "The Father of Nathan is an unnamed man from the united kingdom period, recognized as the father of Nathan and Joel.",
+  "gender": "male",
+  "offspring": [
+    "person:Nathan.3",
+    "person:Joel.7"
+  ],
+  "references": [
+    "13011038"
+  ]
+}

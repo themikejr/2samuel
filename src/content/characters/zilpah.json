@@ -1,0 +1,26 @@
+{
+  "acaiId": "person:Zilpah",
+  "name": "Zilpah",
+  "description": "A slave of the matriarch Leah and concubine of the patriarch Jacob, and the mother of Gad and Asher.",
+  "gender": "female",
+  "partners": [
+    "person:Israel"
+  ],
+  "offspring": [
+    "person:Gad",
+    "person:Asher"
+  ],
+  "roles": [
+    "Concubine",
+    "Matriarch"
+  ],
+  "references": [
+    "01029024",
+    "01030009",
+    "01030010",
+    "01030012",
+    "01035026",
+    "01037002",
+    "01046018"
+  ]
+}

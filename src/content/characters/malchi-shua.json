@@ -1,0 +1,20 @@
+{
+  "acaiId": "person:Malchi-shua",
+  "name": "Malchi-shua",
+  "description": "A son of King Saul, killed in battle by the Philistines.",
+  "gender": "male",
+  "father": "person:Saul.2",
+  "mother": "person:Ahinoam",
+  "tribe": "group:Benjamin",
+  "roles": [
+    "Royal Family Member",
+    "Warrior"
+  ],
+  "references": [
+    "09014049",
+    "09031002",
+    "13008033",
+    "13009039",
+    "13010002"
+  ]
+}

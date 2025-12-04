@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Hadad.4",
+  "name": "Hadad (Genesis 25:15)",
+  "description": "Hadad, also known as Hadar in Ben Chaim, was a son of Ishmael and brother to many siblings, living during the time of the patriarchs as mentioned in Genesis 25:15.",
+  "gender": "male",
+  "father": "person:Ishmael",
+  "tribe": "group:Arabia",
+  "references": [
+    "01025015",
+    "13001030"
+  ]
+}

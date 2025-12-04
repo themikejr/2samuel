@@ -1,0 +1,17 @@
+{
+  "acaiId": "person:Mattatha",
+  "name": "Mattatha",
+  "description": "Son of Nathan and the father of Menna in Jesus's family tree according to Luke's gospel.",
+  "gender": "male",
+  "father": "person:Nathan",
+  "offspring": [
+    "person:Menna"
+  ],
+  "tribe": "group:Judah",
+  "roles": [
+    "Relative of Jesus"
+  ],
+  "references": [
+    "42003031"
+  ]
+}

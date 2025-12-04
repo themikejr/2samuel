@@ -1,0 +1,11 @@
+{
+  "acaiId": "person:Jaasiel.2",
+  "name": "Jaasiel (1 Chronicles 27:21)",
+  "description": "A man from the tribe of Benjamin who was an officer under King David, mentioned in 1 Chronicles 27:21.",
+  "gender": "male",
+  "father": "person:Abner",
+  "tribe": "group:Benjamin",
+  "references": [
+    "13027021"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "acaiId": "person:Rebekah",
+  "name": "Rebekah",
+  "description": "Wife of Isaac, and mother of Esau and Jacob. She was the daughter of Bethuel, and the sister of Laban.",
+  "gender": "female",
+  "father": "person:Bethuel",
+  "partners": [
+    "person:Isaac"
+  ],
+  "offspring": [
+    "person:Esau",
+    "person:Israel"
+  ],
+  "tribe": "group:Earlypatriarchs",
+  "roles": [
+    "Matriarch"
+  ],
+  "references": [
+    "01022023",
+    "01024015",
+    "01024029",
+    "01024030",
+    "01024045",
+    "01024051",
+    "01024053",
+    "01024058",
+    "01024059",
+    "01024060",
+    "01024061",
+    "01024064",
+    "01024067",
+    "01025020",
+    "01025021",
+    "01025028",
+    "01026007",
+    "01026008",
+    "01026035",
+    "01027005",
+    "01027006",
+    "01027011",
+    "01027015",
+    "01027042",
+    "01027046",
+    "01028005",
+    "01029012",
+    "01035008",
+    "01049031",
+    "45009010"
+  ]
+}

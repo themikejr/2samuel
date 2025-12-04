@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Elihu.4",
+  "name": "Elihu (1 Chronicles 27:18)",
+  "description": "Elihu, the son of Jesse and brother of David, was an officer from the tribe of Judah during Israel's united kingdom, mentioned in 1 Chronicles 27:18.",
+  "gender": "male",
+  "father": "person:Jesse",
+  "mother": "person:Nahash.3",
+  "tribe": "group:Judah",
+  "references": [
+    "13027018"
+  ]
+}

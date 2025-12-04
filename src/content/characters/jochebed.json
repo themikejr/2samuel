@@ -1,0 +1,20 @@
+{
+  "acaiId": "person:Jochebed",
+  "name": "Jochebed",
+  "description": "A woman of the tribe of Levi, mother of Moses, Aaron, and Miriam, living during the time in Egypt and the wilderness, first mentioned in Exodus 6:20.",
+  "gender": "female",
+  "father": "person:Levi.3",
+  "partners": [
+    "person:Amram"
+  ],
+  "offspring": [
+    "person:Moses",
+    "person:Aaron",
+    "person:Miriam"
+  ],
+  "tribe": "group:Levi",
+  "references": [
+    "02006020",
+    "04026059"
+  ]
+}

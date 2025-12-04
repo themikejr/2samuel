@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Massa",
+  "name": "Massa",
+  "description": "A man from the time of the patriarchs, son of Ishmael and grandson of Abraham, first mentioned in Genesis 25:14.",
+  "gender": "male",
+  "father": "person:Ishmael",
+  "tribe": "group:Arabia",
+  "references": [
+    "01025014",
+    "13001030"
+  ]
+}

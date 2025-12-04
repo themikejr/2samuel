@@ -1,0 +1,16 @@
+{
+  "acaiId": "person:Jotham",
+  "name": "Jotham",
+  "description": "A son of the judge Gideon, known for the fable he told about Shechem.",
+  "gender": "male",
+  "father": "person:Gideon",
+  "roles": [
+    "Leader"
+  ],
+  "references": [
+    "07009005",
+    "07009007",
+    "07009021",
+    "07009057"
+  ]
+}

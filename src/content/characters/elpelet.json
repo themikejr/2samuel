@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Elpelet",
+  "name": "Elpelet",
+  "description": "Elpelet, also called Eliphelet, was one of David's sons from the tribe of Judah, living during Israel's united kingdom and first mentioned in 1 Chronicles 3:6.",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:JerusalemWives",
+  "tribe": "group:Judah",
+  "references": [
+    "13003006",
+    "13014005"
+  ]
+}

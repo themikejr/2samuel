@@ -1,0 +1,20 @@
+{
+  "acaiId": "person:Ahinoam",
+  "name": "Ahinoam",
+  "description": "The wife of Saul and mother to several children including Jonathan, mentioned in 1 Samuel 14:50.",
+  "gender": "female",
+  "father": "person:Ahimaaz",
+  "partners": [
+    "person:Saul.2"
+  ],
+  "offspring": [
+    "person:Jonathan.3",
+    "person:Abinadab.2",
+    "person:Malchi-shua",
+    "person:Merab",
+    "person:Michal"
+  ],
+  "references": [
+    "09014050"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "acaiId": "person:Dan",
+  "name": "Dan (Patriarch)",
+  "description": "One of the twelve sons of the patriarch Jacob by the slave Bilhah. Dan was the founder of the tribe of Dan and father of Hushim.",
+  "gender": "male",
+  "father": "person:Israel",
+  "mother": "person:Bilhah",
+  "offspring": [
+    "person:Hushim.2"
+  ],
+  "tribe": "group:Dan",
+  "roles": [
+    "Leader",
+    "Patriarch"
+  ],
+  "references": [
+    "01030006",
+    "01035025",
+    "01046023",
+    "01049016",
+    "01049017",
+    "02001004",
+    "13002002"
+  ]
+}

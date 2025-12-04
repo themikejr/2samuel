@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Tarea",
+  "name": "Tarea",
+  "description": "Tarea, also called Tahrea, mentioned in 1 Chronicles 8:35 and 9:41, was a man from the tribe of Benjamin and the son of Micah during Israel's united kingdom.",
+  "gender": "male",
+  "father": "person:Micah.2",
+  "tribe": "group:Benjamin",
+  "references": [
+    "13008035",
+    "13009041"
+  ]
+}

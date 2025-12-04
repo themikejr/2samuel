@@ -1,0 +1,18 @@
+{
+  "acaiId": "person:Naamah",
+  "name": "Naamah",
+  "description": "Naamah was an Ammonite woman during Israel's united kingdom, married to Solomon and mother of Rehoboam, mentioned in 1 Kings 14:21.",
+  "gender": "female",
+  "partners": [
+    "person:Solomon"
+  ],
+  "offspring": [
+    "person:Rehoboam"
+  ],
+  "tribe": "group:Ammon",
+  "references": [
+    "11014021",
+    "11014031",
+    "14012013"
+  ]
+}

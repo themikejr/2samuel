@@ -1,0 +1,32 @@
+{
+  "acaiId": "person:Maacah.3",
+  "name": "Maacah",
+  "description": "Daughter of King David's son Absalom, wife of King Rehoboam, and mother of King Abijam (Abijah), Attai, Ziza, and Shelomith.",
+  "gender": "female",
+  "father": "person:Uriel.3",
+  "mother": "person:Tamar.3",
+  "partners": [
+    "person:Rehoboam"
+  ],
+  "offspring": [
+    "person:Abijah.4",
+    "person:Attai.3",
+    "person:Ziza.2",
+    "person:Shelomith.3"
+  ],
+  "tribe": "group:Judah",
+  "roles": [
+    "Royal Family Member",
+    "Matriarch"
+  ],
+  "references": [
+    "11015002",
+    "11015010",
+    "11015013",
+    "14011020",
+    "14011021",
+    "14011022",
+    "14013002",
+    "14015016"
+  ]
+}

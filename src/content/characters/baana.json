@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Baana",
+  "name": "Baana",
+  "description": "An official in Solomon's kingdom, son of Ahilud, mentioned in 1 Kings 4:12.",
+  "gender": "male",
+  "father": "person:Ahilud",
+  "references": [
+    "11004012"
+  ]
+}

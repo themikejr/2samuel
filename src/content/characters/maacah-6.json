@@ -1,0 +1,26 @@
+{
+  "acaiId": "person:Maacah.6",
+  "name": "Maacah (1 Chronicles 8:29)",
+  "description": "A woman from the tribe of Benjamin during the united kingdom of Israel, married to Abiel, and mother of Kish, Ner, Abdon, Zur, Baal, Nadab, Gedor, Ahio, Zecher, and Mikloth.",
+  "gender": "female",
+  "partners": [
+    "person:Abiel.2"
+  ],
+  "offspring": [
+    "person:Kish",
+    "person:Ner.2",
+    "person:Abdon.3",
+    "person:Zur.3",
+    "person:Baal",
+    "person:Nadab.4",
+    "person:Gedor",
+    "person:Ahio.3",
+    "person:Zecher",
+    "person:Mikloth"
+  ],
+  "tribe": "group:Benjamin",
+  "references": [
+    "13008029",
+    "13009035"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "acaiId": "person:Abda",
+  "name": "Abda (Father of Adoniram)",
+  "description": "A man from the time of Israel's united kingdom and father of Adoniram, mentioned in 1 Kings 4:6.",
+  "gender": "male",
+  "offspring": [
+    "person:Adoram"
+  ],
+  "roles": [
+    "Official"
+  ],
+  "references": [
+    "11004006"
+  ]
+}

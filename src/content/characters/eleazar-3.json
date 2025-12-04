@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Eleazar.3",
+  "name": "Eleazar (1 Samuel 7:1)",
+  "description": "Eleazar, son of Abinadab from the tribe of Levi, lived during Israel's united kingdom and is mentioned in 1 Samuel 7:1.",
+  "gender": "male",
+  "father": "person:Abinadab",
+  "references": [
+    "09007001"
+  ]
+}

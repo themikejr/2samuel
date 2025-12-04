@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Ozem",
+  "name": "Ozem",
+  "description": "Ozem, a brother of King David and son of Jesse from the tribe of Judah, is mentioned in 1 Chronicles 2:15.",
+  "gender": "male",
+  "father": "person:Jesse",
+  "mother": "person:Nahash.3",
+  "tribe": "group:Judah",
+  "references": [
+    "13002015"
+  ]
+}

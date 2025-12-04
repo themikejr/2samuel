@@ -1,0 +1,28 @@
+{
+  "acaiId": "person:Ahimelech",
+  "name": "Ahimelech",
+  "description": "A priest at Nob during the time of King David. He was the son of Ahitub, and the father of Abiathar.",
+  "gender": "male",
+  "father": "person:Ahitub",
+  "offspring": [
+    "person:Abiathar"
+  ],
+  "roles": [
+    "Priest"
+  ],
+  "references": [
+    "09014003",
+    "09014018",
+    "09021002",
+    "09021003",
+    "09021009",
+    "09022009",
+    "09022011",
+    "09022014",
+    "09022016",
+    "09022020",
+    "09023006",
+    "09030007",
+    "19052002"
+  ]
+}

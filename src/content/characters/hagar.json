@@ -1,0 +1,30 @@
+{
+  "acaiId": "person:Hagar",
+  "name": "Hagar",
+  "description": "The patriarch Abram's concubine who gave birth to his first-born son Ishmael.",
+  "gender": "female",
+  "partners": [
+    "person:Abraham"
+  ],
+  "offspring": [
+    "person:Ishmael"
+  ],
+  "roles": [
+    "Concubine",
+    "Matriarch"
+  ],
+  "references": [
+    "01016001",
+    "01016003",
+    "01016004",
+    "01016008",
+    "01016015",
+    "01016016",
+    "01021009",
+    "01021014",
+    "01021017",
+    "01025012",
+    "48004024",
+    "48004025"
+  ]
+}

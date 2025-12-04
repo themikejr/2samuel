@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Jether.2",
+  "name": "Jether (Judges 8:20)",
+  "description": "The son of Gideon, mentioned in Judges 8:20, living before Israel's Monarchy.",
+  "gender": "male",
+  "father": "person:Gideon",
+  "references": [
+    "07008020"
+  ]
+}

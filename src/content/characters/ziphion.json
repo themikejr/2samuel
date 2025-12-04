@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Ziphion",
+  "name": "Ziphion",
+  "description": "Ziphion, also called Zephon, was a man from the tribe of Gad during the time of Egypt and wilderness, son of Gad and mentioned in Genesis 46:16.",
+  "gender": "male",
+  "father": "person:Gad",
+  "tribe": "group:Gad",
+  "references": [
+    "01046016",
+    "04026015"
+  ]
+}

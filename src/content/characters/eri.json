@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Eri",
+  "name": "Eri",
+  "description": "Eri, first mentioned in Genesis 46:16, was a man of the tribe of Gad and son of Gad.",
+  "gender": "male",
+  "father": "person:Gad",
+  "tribe": "group:Gad",
+  "references": [
+    "01046016",
+    "04026016"
+  ]
+}

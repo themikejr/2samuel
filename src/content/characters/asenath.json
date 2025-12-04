@@ -1,0 +1,19 @@
+{
+  "acaiId": "person:Asenath",
+  "name": "Asenath",
+  "description": "A woman from the time of the patriarchs, daughter of Potiphera, wife of Joseph, and mother of Manasseh and Ephraim, mentioned in Genesis 41:45.",
+  "gender": "female",
+  "father": "person:Potiphera",
+  "partners": [
+    "person:Joseph.10"
+  ],
+  "offspring": [
+    "person:Manasseh",
+    "person:Ephraim"
+  ],
+  "references": [
+    "01041045",
+    "01041050",
+    "01046020"
+  ]
+}

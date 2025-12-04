@@ -1,0 +1,35 @@
+{
+  "acaiId": "person:Abiel.2",
+  "name": "Abiel (Grandfather of King Saul)",
+  "description": "Father of Kish and Ner, and the grandfather of King Saul and his army commander Abner.",
+  "gender": "male",
+  "father": "person:Zeror",
+  "partners": [
+    "person:Maacah.6"
+  ],
+  "offspring": [
+    "person:Kish",
+    "person:Ner.2",
+    "person:Abdon.3",
+    "person:Zur.3",
+    "person:Baal",
+    "person:Nadab.4",
+    "person:Gedor",
+    "person:Ahio.3",
+    "person:Zecher",
+    "person:Mikloth"
+  ],
+  "tribe": "group:Benjamin",
+  "roles": [
+    "Royal Family Member",
+    "Patriarch"
+  ],
+  "references": [
+    "09009001",
+    "09014051",
+    "13008029",
+    "13008033",
+    "13009035",
+    "13009039"
+  ]
+}

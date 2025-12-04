@@ -1,0 +1,15 @@
+{
+  "acaiId": "person:Basemath.2",
+  "name": "Basemath (1 Kings 4:15)",
+  "description": "A woman from the tribe of Judah, daughter of Solomon, and wife of Ahimaaz, mentioned in 1 Kings 4:15.",
+  "gender": "female",
+  "father": "person:Solomon",
+  "mother": "person:AWifeOfSolomon",
+  "partners": [
+    "person:Ahimaaz.3"
+  ],
+  "tribe": "group:Judah",
+  "references": [
+    "11004015"
+  ]
+}

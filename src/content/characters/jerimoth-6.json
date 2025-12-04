@@ -1,0 +1,18 @@
+{
+  "acaiId": "person:Jerimoth.6",
+  "name": "Jerimoth (2 Chronicles 11:18)",
+  "description": "A son of King David from the tribe of Judah, father of Mahalath, mentioned in 2 Chronicles 11:18.",
+  "gender": "male",
+  "father": "person:David",
+  "mother": "person:JerusalemWives",
+  "partners": [
+    "person:Abihail.4"
+  ],
+  "offspring": [
+    "person:Mahalath.2"
+  ],
+  "tribe": "group:Judah",
+  "references": [
+    "14011018"
+  ]
+}

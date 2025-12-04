@@ -1,0 +1,11 @@
+{
+  "acaiId": "person:Sachar",
+  "name": "Sachar",
+  "description": "Sachar, also known as Sacar or Sakar, was a Levite and son of Obed-edom, living during Israel's united kingdom and mentioned in 1 Chronicles 26:4.",
+  "gender": "male",
+  "father": "person:Obed-edom",
+  "tribe": "group:Levi",
+  "references": [
+    "13026004"
+  ]
+}

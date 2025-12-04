@@ -1,0 +1,11 @@
+{
+  "acaiId": "person:Zebadiah.5",
+  "name": "Zebadiah (1 Chronicles 27:7)",
+  "description": "Zebadiah, the son of Asahel, was a division commander during the time of King David, mentioned in 1 Chronicles 27:7.",
+  "gender": "male",
+  "father": "person:Asahel",
+  "tribe": "group:Judah",
+  "references": [
+    "13027007"
+  ]
+}

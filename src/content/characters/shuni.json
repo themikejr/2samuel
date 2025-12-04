@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Shuni",
+  "name": "Shuni",
+  "description": "Shuni was a man from the tribe of Gad living during the time of Egypt and the wilderness, first mentioned in Genesis 46:16 as a son of Gad and brother of Ziphion, Haggi, Ezbon, Eri, Arod, and Areli.",
+  "gender": "male",
+  "father": "person:Gad",
+  "tribe": "group:Gad",
+  "references": [
+    "01046016",
+    "04026015"
+  ]
+}

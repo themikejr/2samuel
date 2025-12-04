@@ -1,0 +1,13 @@
+{
+  "acaiId": "person:Naphish",
+  "name": "Naphish",
+  "description": "Naphish, a man living at the time of the patriarchs, was a son of Ishmael and part of the Arab tribes.",
+  "gender": "male",
+  "father": "person:Ishmael",
+  "tribe": "group:Arabia",
+  "references": [
+    "01025015",
+    "13001031",
+    "13005019"
+  ]
+}

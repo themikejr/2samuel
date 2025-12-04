@@ -1,0 +1,17 @@
+{
+  "acaiId": "person:AWifeOfSolomon",
+  "name": "A Wife of Solomon",
+  "description": "A woman of the tribe of Judah, wife of Solomon, and mother of Taphath and Basemath, living during the time of Israel's united kingdom as implied in 1 Kings 4:11.",
+  "gender": "female",
+  "partners": [
+    "person:Solomon"
+  ],
+  "offspring": [
+    "person:Taphath",
+    "person:Basemath.2"
+  ],
+  "tribe": "group:Judah",
+  "references": [
+    "11004011"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "acaiId": "person:Terah",
+  "name": "Terah",
+  "description": "Father of the patriarch Abraham.",
+  "gender": "male",
+  "father": "person:Nahor",
+  "offspring": [
+    "person:Abraham",
+    "person:Nahor.2",
+    "person:Haran",
+    "person:Sarah"
+  ],
+  "tribe": "group:Earlypatriarchs",
+  "roles": [
+    "Patriarch"
+  ],
+  "references": [
+    "01011024",
+    "01011025",
+    "01011026",
+    "01011027",
+    "01011028",
+    "01011031",
+    "01011032",
+    "06024002",
+    "13001026",
+    "42003034"
+  ]
+}

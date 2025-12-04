@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Arod",
+  "name": "Arod",
+  "description": "A son of Gad from the tribe of Gad, also called Arod or Arodi, mentioned in Genesis 46:16 and Numbers 26:17.",
+  "gender": "male",
+  "father": "person:Gad",
+  "tribe": "group:Gad",
+  "references": [
+    "01046016",
+    "04026017"
+  ]
+}

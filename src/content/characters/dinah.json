@@ -1,0 +1,19 @@
+{
+  "acaiId": "person:Dinah",
+  "name": "Dinah",
+  "description": "Daughter of the patriarch Jacob and his wife Leah. She was a sister of Simeon and Levi.",
+  "gender": "female",
+  "father": "person:Israel",
+  "mother": "person:Leah",
+  "tribe": "group:Earlypatriarchs",
+  "references": [
+    "01030021",
+    "01034001",
+    "01034003",
+    "01034005",
+    "01034013",
+    "01034025",
+    "01034026",
+    "01046015"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "acaiId": "person:Ammizabad",
+  "name": "Ammizabad",
+  "description": "A man living during the time of Israel's united kingdom, son of Benaiah, mentioned in 1 Chronicles 27:6.",
+  "gender": "male",
+  "father": "person:Benaiah",
+  "tribe": "group:Judah",
+  "references": [
+    "13027006"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "acaiId": "person:Elihoreph",
+  "name": "Elihoreph",
+  "description": "Elihoreph, a man living during Israel's united kingdom and a son of Seraiah, is an official mentioned in 1 Kings 4:3.",
+  "gender": "male",
+  "father": "person:Seraiah",
+  "references": [
+    "11004003"
+  ]
+}

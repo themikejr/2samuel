@@ -1,0 +1,23 @@
+{
+  "acaiId": "person:Serug",
+  "name": "Serug",
+  "description": "The son of the patriarch Reu and father of Abraham's grandfather Nahor. He is listed in the family line of Jesus.",
+  "gender": "male",
+  "father": "person:Reu",
+  "offspring": [
+    "person:Nahor"
+  ],
+  "tribe": "group:Earlypatriarchs",
+  "roles": [
+    "Leader",
+    "Patriarch"
+  ],
+  "references": [
+    "01011020",
+    "01011021",
+    "01011022",
+    "01011023",
+    "13001026",
+    "42003035"
+  ]
+}

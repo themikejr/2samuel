@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Jetur",
+  "name": "Jetur",
+  "description": "A son of Ishmael and a man of the Arabs during the time of the patriarchs, mentioned in Genesis 25:15.",
+  "gender": "male",
+  "father": "person:Ishmael",
+  "tribe": "group:Arabia",
+  "references": [
+    "01025015",
+    "13001031"
+  ]
+}

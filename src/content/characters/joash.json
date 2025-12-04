@@ -1,0 +1,22 @@
+{
+  "acaiId": "person:Joash",
+  "name": "Joash",
+  "description": "Father of the judge Gideon from the tribe of Manasseh, an Abierizite.",
+  "gender": "male",
+  "offspring": [
+    "person:Gideon"
+  ],
+  "roles": [
+    "Leader"
+  ],
+  "references": [
+    "07006011",
+    "07006029",
+    "07006030",
+    "07006031",
+    "07007014",
+    "07008013",
+    "07008029",
+    "07008032"
+  ]
+}

@@ -82,8 +82,12 @@ function linkCharacterNames(text: string, relationshipContext: Map<string, any>)
 	return linkedText;
 }
 
-// Group references by chapter
-const referencesByChapter = character.data.references.reduce((acc, ref) => {
+// Separate 2 Samuel references from all Bible references
+const samuelReferences = character.data.references.filter(ref => ref.startsWith('10'));
+const allReferences = character.data.references;
+
+// Group 2 Samuel references by chapter
+const referencesByChapter = samuelReferences.reduce((acc, ref) => {
 	const { chapter, verse } = formatReference(ref);
 	if (!acc[chapter]) {
 		acc[chapter] = [];
@@ -91,6 +95,16 @@ const referencesByChapter = character.data.references.reduce((acc, ref) => {
 	acc[chapter].push(verse);
 	return acc;
 }, {} as Record<number, number[]>);
+
+// Group all references by book
+const referencesByBook = allReferences.reduce((acc, ref) => {
+	const bookCode = parseInt(ref.substring(0, 2), 10);
+	if (!acc[bookCode]) {
+		acc[bookCode] = 0;
+	}
+	acc[bookCode]++;
+	return acc;
+}, {} as Record<number, number>);
 
 // Get related characters
 const father = character.data.father ? getCharacterByAcaiId(character.data.father) : null;
@@ -130,6 +144,7 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 ---
 
 <Layout title={character.data.name}>
+	<meta slot="head" name="book-references" content={JSON.stringify(referencesByBook)} />
 	<article class="character-detail">
 		<div class="character-header">
 			{/* Metadata badges */}
@@ -247,16 +262,28 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 		<section class="references-section">
 			<h2>Scripture References</h2>
 			<p class="references-intro">
-				{character.data.name} appears in {character.data.references.length} verse{character.data.references.length !== 1 ? 's' : ''} across {Object.keys(referencesByChapter).length} chapter{Object.keys(referencesByChapter).length !== 1 ? 's' : ''} in 2 Samuel.
+				{character.data.name} appears in <strong>{allReferences.length} verse{allReferences.length !== 1 ? 's' : ''}</strong> across the Bible{samuelReferences.length > 0 && `, including ${samuelReferences.length} verse${samuelReferences.length !== 1 ? 's' : ''} in 2 Samuel`}.
 			</p>
 
-			{/* Histogram visualization */}
-			<div class="histogram-container">
-				<h3 class="histogram-title">Reference Distribution</h3>
-				<div class="histogram-wrapper">
-					<canvas id="references-histogram"></canvas>
+			{/* Bible-wide histogram */}
+			{allReferences.length > 0 && (
+				<div class="histogram-container">
+					<h3 class="histogram-title">References Across the Bible</h3>
+					<div class="histogram-wrapper">
+						<canvas id="bible-histogram"></canvas>
+					</div>
 				</div>
-			</div>
+			)}
+
+			{/* 2 Samuel histogram */}
+			{samuelReferences.length > 0 && (
+				<div class="histogram-container">
+					<h3 class="histogram-title">References in 2 Samuel</h3>
+					<div class="histogram-wrapper">
+						<canvas id="samuel-histogram"></canvas>
+					</div>
+				</div>
+			)}
 
 			<div class="references-grid">
 				{Object.entries(referencesByChapter)
@@ -293,11 +320,128 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 	import { Chart, registerables } from 'chart.js';
 	Chart.register(...registerables);
 
-	// Get the data from the page
-	const histogramCanvas = document.getElementById('references-histogram') as HTMLCanvasElement;
+	// Book code to name mapping
+	const bookNames: Record<number, string> = {
+		1: 'Genesis', 2: 'Exodus', 3: 'Leviticus', 4: 'Numbers', 5: 'Deuteronomy',
+		6: 'Joshua', 7: 'Judges', 8: 'Ruth', 9: '1 Samuel', 10: '2 Samuel',
+		11: '1 Kings', 12: '2 Kings', 13: '1 Chronicles', 14: '2 Chronicles',
+		15: 'Ezra', 16: 'Nehemiah', 17: 'Esther', 18: 'Job', 19: 'Psalms',
+		20: 'Proverbs', 21: 'Ecclesiastes', 22: 'Song of Solomon', 23: 'Isaiah',
+		24: 'Jeremiah', 25: 'Lamentations', 26: 'Ezekiel', 27: 'Daniel',
+		28: 'Hosea', 29: 'Joel', 30: 'Amos', 31: 'Obadiah', 32: 'Jonah',
+		33: 'Micah', 34: 'Nahum', 35: 'Habakkuk', 36: 'Zephaniah',
+		37: 'Haggai', 38: 'Zechariah', 39: 'Malachi', 40: 'Matthew',
+		41: 'Mark', 42: 'Luke', 43: 'John', 44: 'Acts', 45: 'Romans',
+		46: '1 Corinthians', 47: '2 Corinthians', 48: 'Galatians',
+		49: 'Ephesians', 50: 'Philippians', 51: 'Colossians',
+		52: '1 Thessalonians', 53: '2 Thessalonians', 54: '1 Timothy',
+		55: '2 Timothy', 56: 'Titus', 57: 'Philemon', 58: 'Hebrews',
+		59: 'James', 60: '1 Peter', 61: '2 Peter', 62: '1 John',
+		63: '2 John', 64: '3 John', 65: 'Jude', 66: 'Revelation'
+	};
 
-	if (histogramCanvas) {
-		// Parse the data from the references grid
+	// Create Bible-wide histogram
+	const bibleCanvas = document.getElementById('bible-histogram') as HTMLCanvasElement;
+	if (bibleCanvas) {
+		// Extract book data from data attributes or parse from page
+		const allRefs = Array.from(document.querySelectorAll('[data-all-refs]'))
+			.map(el => el.getAttribute('data-all-refs'))
+			.filter(Boolean);
+
+		// If no data attributes, parse from the references grid and count manually
+		// Group by book code
+		const bookCounts: Record<number, number> = {};
+
+		// Parse all references to extract book codes
+		const chapterElements = document.querySelectorAll('.chapter-references');
+		chapterElements.forEach((el) => {
+			const chapterTitle = el.querySelector('.chapter-title a')?.textContent;
+			if (chapterTitle) {
+				const verseCount = el.querySelectorAll('.verse-badge').length;
+				bookCounts[10] = (bookCounts[10] || 0) + verseCount;
+			}
+		});
+
+		// Get book data from meta tag (we'll add this)
+		const bookDataEl = document.querySelector('meta[name="book-references"]');
+		if (bookDataEl) {
+			const bookData = JSON.parse(bookDataEl.getAttribute('content') || '{}');
+			Object.assign(bookCounts, bookData);
+		}
+
+		const bookCodes = Object.keys(bookCounts).map(Number).sort((a, b) => a - b);
+		const counts = bookCodes.map(code => bookCounts[code]);
+		const labels = bookCodes.map(code => bookNames[code] || `Book ${code}`);
+
+		new Chart(bibleCanvas, {
+			type: 'bar',
+			data: {
+				labels: labels,
+				datasets: [{
+					label: 'Verse References',
+					data: counts,
+					backgroundColor: 'rgba(34, 139, 34, 0.6)',
+					borderColor: 'rgba(34, 139, 34, 1)',
+					borderWidth: 1,
+					hoverBackgroundColor: 'rgba(34, 139, 34, 0.85)',
+					hoverBorderColor: 'rgba(20, 100, 20, 1)',
+					hoverBorderWidth: 2
+				}]
+			},
+			options: {
+				responsive: true,
+				maintainAspectRatio: true,
+				aspectRatio: 2.5,
+				plugins: {
+					legend: { display: false },
+					tooltip: {
+						backgroundColor: 'rgba(0, 0, 0, 0.8)',
+						padding: 12,
+						cornerRadius: 6,
+						titleFont: { size: 14, weight: 'bold' },
+						bodyFont: { size: 13 },
+						callbacks: {
+							title: (context) => labels[context[0].dataIndex],
+							label: (context) => {
+								const count = context.parsed.y;
+								return `${count} verse${count !== 1 ? 's' : ''}`;
+							}
+						}
+					}
+				},
+				scales: {
+					y: {
+						beginAtZero: true,
+						ticks: { stepSize: 1, font: { size: 11 } },
+						grid: { color: 'rgba(0, 0, 0, 0.05)' },
+						title: {
+							display: true,
+							text: 'Number of Verses',
+							font: { size: 12, weight: 'bold' }
+						}
+					},
+					x: {
+						ticks: {
+							font: { size: 10 },
+							maxRotation: 45,
+							minRotation: 45,
+							autoSkip: false
+						},
+						grid: { display: false },
+						title: {
+							display: true,
+							text: 'Bible Books',
+							font: { size: 12, weight: 'bold' }
+						}
+					}
+				}
+			}
+		});
+	}
+
+	// Create 2 Samuel histogram
+	const samuelCanvas = document.getElementById('samuel-histogram') as HTMLCanvasElement;
+	if (samuelCanvas) {
 		const chapterElements = document.querySelectorAll('.chapter-references');
 		const chapters: number[] = [];
 		const verseCounts: number[] = [];
@@ -312,8 +456,7 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 			}
 		});
 
-		// Create the chart
-		new Chart(histogramCanvas, {
+		new Chart(samuelCanvas, {
 			type: 'bar',
 			data: {
 				labels: chapters.map(ch => `Ch ${ch}`),
@@ -336,14 +479,12 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 					if (activeElements.length > 0) {
 						const index = activeElements[0].index;
 						const chapter = chapters[index];
-						// Scroll to the chapter section
 						const chapterSection = Array.from(chapterElements).find((el) => {
 							const title = el.querySelector('.chapter-title a')?.textContent;
 							return title?.includes(`Chapter ${chapter}`);
 						});
 						if (chapterSection) {
 							chapterSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-							// Add a brief highlight effect
 							chapterSection.classList.add('highlight-flash');
 							setTimeout(() => {
 								chapterSection.classList.remove('highlight-flash');
@@ -352,25 +493,15 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 					}
 				},
 				plugins: {
-					legend: {
-						display: false
-					},
+					legend: { display: false },
 					tooltip: {
 						backgroundColor: 'rgba(0, 0, 0, 0.8)',
 						padding: 12,
 						cornerRadius: 6,
-						titleFont: {
-							size: 14,
-							weight: 'bold'
-						},
-						bodyFont: {
-							size: 13
-						},
+						titleFont: { size: 14, weight: 'bold' },
+						bodyFont: { size: 13 },
 						callbacks: {
-							title: (context) => {
-								const index = context[0].dataIndex;
-								return `Chapter ${chapters[index]}`;
-							},
+							title: (context) => `Chapter ${chapters[context[0].dataIndex]}`,
 							label: (context) => {
 								const count = context.parsed.y;
 								return `${count} verse${count !== 1 ? 's' : ''}`;
@@ -381,40 +512,21 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 				scales: {
 					y: {
 						beginAtZero: true,
-						ticks: {
-							stepSize: 1,
-							font: {
-								size: 11
-							}
-						},
-						grid: {
-							color: 'rgba(0, 0, 0, 0.05)'
-						},
+						ticks: { stepSize: 1, font: { size: 11 } },
+						grid: { color: 'rgba(0, 0, 0, 0.05)' },
 						title: {
 							display: true,
 							text: 'Number of Verses',
-							font: {
-								size: 12,
-								weight: 'bold'
-							}
+							font: { size: 12, weight: 'bold' }
 						}
 					},
 					x: {
-						ticks: {
-							font: {
-								size: 11
-							}
-						},
-						grid: {
-							display: false
-						},
+						ticks: { font: { size: 11 } },
+						grid: { display: false },
 						title: {
 							display: true,
 							text: '2 Samuel Chapters',
-							font: {
-								size: 12,
-								weight: 'bold'
-							}
+							font: { size: 12, weight: 'bold' }
 						}
 					}
 				}

@@ -1,0 +1,12 @@
+{
+  "acaiId": "person:Melech",
+  "name": "Melech",
+  "description": "A man from the tribe of Benjamin, son of Micah, living during the time of Israel's united kingdom, mentioned in 1 Chronicles 8:35.",
+  "gender": "male",
+  "father": "person:Micah.2",
+  "tribe": "group:Benjamin",
+  "references": [
+    "13008035",
+    "13009041"
+  ]
+}
