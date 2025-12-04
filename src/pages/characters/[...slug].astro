@@ -184,8 +184,11 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 				<div class="family-tree">
 					{/* Parents */}
 					{(father || mother) && (
-						<div class="family-group">
-							<h3 class="family-label">Parents</h3>
+						<details class="family-group" open>
+							<summary class="family-summary">
+								<span class="family-label">Parents</span>
+								<span class="family-count">{[father, mother].filter(Boolean).length}</span>
+							</summary>
 							<div class="family-members">
 								{father && (
 									<a href={`/characters/${father.id}/`} class="family-member">
@@ -202,15 +205,16 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 									</a>
 								)}
 							</div>
-						</div>
+						</details>
 					)}
 
 					{/* Siblings */}
 					{siblings.length > 0 && (
-						<div class="family-group">
-							<h3 class="family-label">
-								{siblings.length === 1 ? 'Sibling' : `Siblings (${siblings.length})`}
-							</h3>
+						<details class="family-group" open>
+							<summary class="family-summary">
+								<span class="family-label">{siblings.length === 1 ? 'Sibling' : 'Siblings'}</span>
+								<span class="family-count">{siblings.length}</span>
+							</summary>
 							<div class="family-members">
 								{siblings.map((sibling) => (
 									<a href={`/characters/${sibling.id}/`} class="family-member">
@@ -219,15 +223,16 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 									</a>
 								))}
 							</div>
-						</div>
+						</details>
 					)}
 
 					{/* Partners */}
 					{partners.length > 0 && (
-						<div class="family-group">
-							<h3 class="family-label">
-								{partners.length === 1 ? 'Spouse' : `Spouses (${partners.length})`}
-							</h3>
+						<details class="family-group" open>
+							<summary class="family-summary">
+								<span class="family-label">{partners.length === 1 ? 'Spouse' : 'Spouses'}</span>
+								<span class="family-count">{partners.length}</span>
+							</summary>
 							<div class="family-members">
 								{partners.map((partner) => (
 									<a href={`/characters/${partner.id}/`} class="family-member">
@@ -236,15 +241,16 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 									</a>
 								))}
 							</div>
-						</div>
+						</details>
 					)}
 
 					{/* Offspring */}
 					{offspring.length > 0 && (
-						<div class="family-group">
-							<h3 class="family-label">
-								{offspring.length === 1 ? 'Child' : `Children (${offspring.length})`}
-							</h3>
+						<details class="family-group" open>
+							<summary class="family-summary">
+								<span class="family-label">{offspring.length === 1 ? 'Child' : 'Children'}</span>
+								<span class="family-count">{offspring.length}</span>
+							</summary>
 							<div class="family-members">
 								{offspring.map((child) => (
 									<a href={`/characters/${child.id}/`} class="family-member">
@@ -253,7 +259,7 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 									</a>
 								))}
 							</div>
-						</div>
+						</details>
 					)}
 				</div>
 			</section>
@@ -265,44 +271,109 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 				{character.data.name} appears in <strong>{allReferences.length} verse{allReferences.length !== 1 ? 's' : ''}</strong> across the Bible{samuelReferences.length > 0 && `, including ${samuelReferences.length} verse${samuelReferences.length !== 1 ? 's' : ''} in 2 Samuel`}.
 			</p>
 
-			{/* Bible-wide histogram */}
+			{/* Bible-wide histogram (desktop) */}
 			{allReferences.length > 0 && (
-				<div class="histogram-container">
+				<div class="histogram-container desktop-only">
 					<h3 class="histogram-title">References Across the Bible</h3>
-					<div class="histogram-wrapper">
+					<div class="bible-histogram-scroll">
 						<canvas id="bible-histogram"></canvas>
 					</div>
 				</div>
 			)}
 
-			{/* 2 Samuel histogram */}
-			{samuelReferences.length > 0 && (
-				<div class="histogram-container">
-					<h3 class="histogram-title">References in 2 Samuel</h3>
-					<div class="histogram-wrapper">
-						<canvas id="samuel-histogram"></canvas>
+			{/* Bible-wide collapsible list (mobile) */}
+			{allReferences.length > 0 && (
+				<div class="mobile-references-list mobile-only">
+					<button class="references-toggle" id="bible-refs-toggle" aria-expanded="false">
+						<span class="toggle-title">References Across the Bible</span>
+						<span class="toggle-count">{Object.keys(referencesByBook).length} books</span>
+						<span class="toggle-icon">▼</span>
+					</button>
+					<div class="references-content" id="bible-refs-content">
+						<div class="book-list">
+							{Object.entries(referencesByBook)
+								.sort(([a], [b]) => parseInt(a) - parseInt(b))
+								.map(([bookCode, count]) => {
+									const bookName = {
+										1: 'Genesis', 2: 'Exodus', 3: 'Leviticus', 4: 'Numbers', 5: 'Deuteronomy',
+										6: 'Joshua', 7: 'Judges', 8: 'Ruth', 9: '1 Samuel', 10: '2 Samuel',
+										11: '1 Kings', 12: '2 Kings', 13: '1 Chronicles', 14: '2 Chronicles',
+										15: 'Ezra', 16: 'Nehemiah', 17: 'Esther', 18: 'Job', 19: 'Psalms',
+										20: 'Proverbs', 21: 'Ecclesiastes', 22: 'Song of Solomon', 23: 'Isaiah',
+										24: 'Jeremiah', 25: 'Lamentations', 26: 'Ezekiel', 27: 'Daniel',
+										28: 'Hosea', 29: 'Joel', 30: 'Amos', 31: 'Obadiah', 32: 'Jonah',
+										33: 'Micah', 34: 'Nahum', 35: 'Habakkuk', 36: 'Zephaniah',
+										37: 'Haggai', 38: 'Zechariah', 39: 'Malachi', 40: 'Matthew',
+										41: 'Mark', 42: 'Luke', 43: 'John', 44: 'Acts', 45: 'Romans',
+										46: '1 Corinthians', 47: '2 Corinthians', 48: 'Galatians',
+										49: 'Ephesians', 50: 'Philippians', 51: 'Colossians',
+										52: '1 Thessalonians', 53: '2 Thessalonians', 54: '1 Timothy',
+										55: '2 Timothy', 56: 'Titus', 57: 'Philemon', 58: 'Hebrews',
+										59: 'James', 60: '1 Peter', 61: '2 Peter', 62: '1 John',
+										63: '2 John', 64: '3 John', 65: 'Jude', 66: 'Revelation'
+									}[parseInt(bookCode)] || `Book ${bookCode}`;
+									return (
+										<div class="book-item">
+											<span class="book-name">{bookName}</span>
+											<span class="book-count">{count} verse{count !== 1 ? 's' : ''}</span>
+										</div>
+									);
+								})}
+						</div>
 					</div>
 				</div>
 			)}
 
-			<div class="references-grid">
-				{Object.entries(referencesByChapter)
-					.sort(([a], [b]) => parseInt(a) - parseInt(b))
-					.map(([chapter, verses]) => (
-						<div class="chapter-references">
-							<h3 class="chapter-title">
-								<a href={`/blog/2samuel-${chapter}/`}>Chapter {chapter}</a>
-							</h3>
-							<div class="verses">
-								{verses
-									.sort((a, b) => a - b)
-									.map((verse) => (
-										<span class="verse-badge">{verse}</span>
-									))}
-							</div>
+			{/* 2 Samuel histogram (desktop) */}
+			{samuelReferences.length > 0 && (
+				<div class="histogram-container desktop-only">
+					<h3 class="histogram-title">References in 2 Samuel</h3>
+					<div class="histogram-wrapper" data-chapter-verses={JSON.stringify(referencesByChapter)}>
+						<canvas id="samuel-histogram"></canvas>
+					</div>
+
+					{/* Verse Detail Panel */}
+					<div class="verse-detail-panel" id="verse-detail-panel">
+						<div class="verse-detail-header">
+							<div class="verse-detail-title" id="verse-detail-title">Chapter 1</div>
+							<button class="verse-detail-close" id="close-panel" aria-label="Close">&times;</button>
 						</div>
-					))}
-			</div>
+						<div class="verse-pills" id="verse-pills-container">
+							{/* Verse pills will be inserted here dynamically */}
+						</div>
+					</div>
+				</div>
+			)}
+
+			{/* 2 Samuel collapsible chapter list (mobile) */}
+			{samuelReferences.length > 0 && (
+				<div class="mobile-references-list mobile-only">
+					<button class="references-toggle" id="samuel-refs-toggle" aria-expanded="true">
+						<span class="toggle-title">References in 2 Samuel</span>
+						<span class="toggle-count">{Object.keys(referencesByChapter).length} chapters</span>
+						<span class="toggle-icon">▼</span>
+					</button>
+					<div class="references-content expanded" id="samuel-refs-content">
+						<div class="chapter-list">
+							{Object.entries(referencesByChapter)
+								.sort(([a], [b]) => parseInt(a) - parseInt(b))
+								.map(([chapter, verses]) => (
+									<details class="chapter-details">
+										<summary class="chapter-summary">
+											<span class="chapter-name">Chapter {chapter}</span>
+											<span class="chapter-count">{verses.length} verse{verses.length !== 1 ? 's' : ''}</span>
+										</summary>
+										<div class="verse-list">
+											{verses.map((verse) => (
+												<span class="verse-number">{verse}</span>
+											))}
+										</div>
+									</details>
+								))}
+						</div>
+					</div>
+				</div>
+			)}
 		</section>
 
 		<div class="data-attribution">
@@ -439,22 +510,46 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 		});
 	}
 
-	// Create 2 Samuel histogram
-	const samuelCanvas = document.getElementById('samuel-histogram') as HTMLCanvasElement;
-	if (samuelCanvas) {
-		const chapterElements = document.querySelectorAll('.chapter-references');
-		const chapters: number[] = [];
-		const verseCounts: number[] = [];
+	// Helper function to format verse ranges
+	function formatVerseRange(verses: number[]): string {
+		if (verses.length === 0) return '';
+		if (verses.length <= 5) return verses.join(', ');
 
-		chapterElements.forEach((el) => {
-			const chapterTitle = el.querySelector('.chapter-title a')?.textContent;
-			if (chapterTitle) {
-				const chapterNum = parseInt(chapterTitle.replace('Chapter ', ''));
-				const verseCount = el.querySelectorAll('.verse-badge').length;
-				chapters.push(chapterNum);
-				verseCounts.push(verseCount);
+		const ranges: string[] = [];
+		let start = verses[0];
+		let end = verses[0];
+
+		for (let i = 1; i < verses.length; i++) {
+			if (verses[i] === end + 1) {
+				end = verses[i];
+			} else {
+				ranges.push(start === end ? `${start}` : `${start}-${end}`);
+				start = end = verses[i];
 			}
-		});
+		}
+		ranges.push(start === end ? `${start}` : `${start}-${end}`);
+
+		return ranges.join(', ');
+	}
+
+	// Create 2 Samuel histogram with enhanced interactivity
+	const samuelCanvas = document.getElementById('samuel-histogram') as HTMLCanvasElement;
+	const histogramWrapper = document.querySelector('.histogram-wrapper[data-chapter-verses]');
+	const chapterDataStr = histogramWrapper?.getAttribute('data-chapter-verses');
+
+	if (samuelCanvas && chapterDataStr) {
+		const referencesByChapterData = JSON.parse(chapterDataStr);
+
+		// Build chapter data
+		const chapterData: Record<number, number[]> = {};
+		Object.entries(referencesByChapterData)
+			.sort(([a], [b]) => parseInt(a) - parseInt(b))
+			.forEach(([chapter, verses]) => {
+				chapterData[parseInt(chapter)] = (verses as number[]).sort((a, b) => a - b);
+			});
+
+		const chapters = Object.keys(chapterData).map(Number);
+		const verseCounts = chapters.map(ch => chapterData[ch].length);
 
 		new Chart(samuelCanvas, {
 			type: 'bar',
@@ -479,17 +574,7 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 					if (activeElements.length > 0) {
 						const index = activeElements[0].index;
 						const chapter = chapters[index];
-						const chapterSection = Array.from(chapterElements).find((el) => {
-							const title = el.querySelector('.chapter-title a')?.textContent;
-							return title?.includes(`Chapter ${chapter}`);
-						});
-						if (chapterSection) {
-							chapterSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-							chapterSection.classList.add('highlight-flash');
-							setTimeout(() => {
-								chapterSection.classList.remove('highlight-flash');
-							}, 1500);
-						}
+						toggleVerseDetail(chapter, chapterData);
 					}
 				},
 				plugins: {
@@ -504,7 +589,12 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 							title: (context) => `Chapter ${chapters[context[0].dataIndex]}`,
 							label: (context) => {
 								const count = context.parsed.y;
-								return `${count} verse${count !== 1 ? 's' : ''}`;
+								const chapter = chapters[context[0].dataIndex];
+								const verses = chapterData[chapter];
+								return [
+									`${count} verse${count !== 1 ? 's' : ''}`,
+									`Verses: ${formatVerseRange(verses)}`
+								];
 							}
 						}
 					}
@@ -532,7 +622,91 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 				}
 			}
 		});
+
+		// Toggle verse detail panel functionality
+		let currentChapter: number | null = null;
+		const versePanel = document.getElementById('verse-detail-panel');
+		const versePillsContainer = document.getElementById('verse-pills-container');
+		const verseTitleEl = document.getElementById('verse-detail-title');
+
+		function toggleVerseDetail(chapter: number, data: Record<number, number[]>) {
+			if (!versePanel || !versePillsContainer || !verseTitleEl) return;
+
+			if (currentChapter === chapter && versePanel.classList.contains('expanded')) {
+				// Close if clicking same chapter
+				versePanel.classList.remove('expanded');
+				currentChapter = null;
+			} else {
+				// Open/switch to new chapter
+				currentChapter = chapter;
+				verseTitleEl.textContent = `Chapter ${chapter}`;
+
+				// Build verse pills
+				const verses = data[chapter];
+				versePillsContainer.innerHTML = verses.map(verse =>
+					`<span class="verse-pill">
+						<span class="verse-pill-icon">📖</span>
+						<span>Verse ${verse}</span>
+					</span>`
+				).join('');
+
+				versePanel.classList.add('expanded');
+			}
+		}
+
+		// Close button handler
+		const closeButton = document.getElementById('close-panel');
+		if (closeButton) {
+			closeButton.addEventListener('click', () => {
+				if (versePanel) {
+					versePanel.classList.remove('expanded');
+					currentChapter = null;
+				}
+			});
+		}
 	}
+
+	// Mobile collapsible list functionality
+	function setupCollapsibleToggle(toggleId: string, contentId: string) {
+		const toggle = document.getElementById(toggleId);
+		const content = document.getElementById(contentId);
+
+		if (toggle && content) {
+			toggle.addEventListener('click', () => {
+				const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+				toggle.setAttribute('aria-expanded', (!isExpanded).toString());
+				content.classList.toggle('expanded');
+
+				// Rotate icon
+				const icon = toggle.querySelector('.toggle-icon');
+				if (icon) {
+					icon.textContent = isExpanded ? '▼' : '▲';
+				}
+			});
+		}
+	}
+
+	// Setup collapsible toggles
+	setupCollapsibleToggle('bible-refs-toggle', 'bible-refs-content');
+	setupCollapsibleToggle('samuel-refs-toggle', 'samuel-refs-content');
+
+	// Collapse family groups on mobile by default
+	function collapseFamilyGroupsOnMobile() {
+		if (window.innerWidth <= 768) {
+			const familyGroups = document.querySelectorAll('.family-group');
+			familyGroups.forEach((group) => {
+				if (group instanceof HTMLDetailsElement) {
+					group.open = false;
+				}
+			});
+		}
+	}
+
+	// Run on page load
+	collapseFamilyGroupsOnMobile();
+
+	// Re-check on window resize
+	window.addEventListener('resize', collapseFamilyGroupsOnMobile);
 </script>
 
 <style>
@@ -635,13 +809,51 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+		padding: 1rem;
+		background: white;
+		border-radius: 8px;
+		border: 1px solid #e5e5e5;
+	}
+
+	.family-summary {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		cursor: pointer;
+		list-style: none;
+		user-select: none;
+		padding: 0.75rem 1rem;
+		margin: -1rem -1rem 0.5rem -1rem;
+		border-radius: 8px;
+		transition: background-color 0.2s ease;
+	}
+
+	.family-summary:hover {
+		background-color: rgba(0, 0, 0, 0.03);
+	}
+
+	.family-summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.family-summary::marker {
+		display: none;
 	}
 
 	.family-label {
 		font-family: var(--font-display);
 		font-size: 1.2rem;
 		margin: 0;
+		color: var(--color-text);
+		font-weight: 600;
+	}
+
+	.family-count {
+		font-size: 1rem;
 		color: var(--color-text-light);
+		background: rgba(0, 0, 0, 0.05);
+		padding: 0.25rem 0.75rem;
+		border-radius: 12px;
 	}
 
 	.family-members {
@@ -732,73 +944,83 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 		max-height: 300px;
 	}
 
-	.references-grid {
-		display: grid;
-		gap: 1.5rem;
-	}
-
-	.chapter-references {
-		padding: 1.5rem;
-		background: #f9f9f9;
+	/* Verse Detail Panel */
+	.verse-detail-panel {
+		margin-top: 1.5rem;
+		padding: 0;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+		background: white;
 		border-radius: 8px;
-		border-left: 4px solid var(--color-accent);
-		transition: all 0.3s ease;
 	}
 
-	.chapter-references.highlight-flash {
-		animation: highlight 1.5s ease-in-out;
+	.verse-detail-panel.expanded {
+		max-height: 500px;
+		padding: 1.5rem;
+		border: 2px solid rgba(139, 69, 19, 0.3);
 	}
 
-	@keyframes highlight {
-		0% {
-			background: #f9f9f9;
-			transform: scale(1);
-		}
-		25% {
-			background: rgba(139, 69, 19, 0.15);
-			transform: scale(1.02);
-		}
-		75% {
-			background: rgba(139, 69, 19, 0.08);
-			transform: scale(1.01);
-		}
-		100% {
-			background: #f9f9f9;
-			transform: scale(1);
-		}
+	.verse-detail-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 1rem;
+		padding-bottom: 0.5rem;
+		border-bottom: 2px solid rgba(139, 69, 19, 0.2);
 	}
 
-	.chapter-title {
+	.verse-detail-title {
 		font-family: var(--font-display);
-		font-size: 1.2rem;
-		margin: 0 0 1rem 0;
-	}
-
-	.chapter-title a {
+		font-size: 1.1rem;
+		font-weight: 600;
 		color: var(--color-text);
-		text-decoration: none;
-		transition: color 0.2s ease;
 	}
 
-	.chapter-title a:hover {
-		color: var(--color-accent);
+	.verse-detail-close {
+		background: none;
+		border: none;
+		font-size: 1.5rem;
+		cursor: pointer;
+		color: #666;
+		padding: 0;
+		width: 30px;
+		height: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 4px;
+		transition: background 0.2s;
 	}
 
-	.verses {
+	.verse-detail-close:hover {
+		background: rgba(0, 0, 0, 0.05);
+	}
+
+	.verse-pills {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.5rem;
 	}
 
-	.verse-badge {
-		display: inline-block;
-		padding: 0.25rem 0.5rem;
-		background: white;
-		border: 1px solid #e5e5e5;
-		border-radius: 4px;
-		font-size: 0.9rem;
-		font-weight: 500;
+	.verse-pill {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem 1rem;
+		background: linear-gradient(135deg, rgba(139, 69, 19, 0.1), rgba(139, 69, 19, 0.05));
+		border: 1px solid rgba(139, 69, 19, 0.3);
+		border-radius: 20px;
 		color: var(--color-text);
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 0.9rem;
+		transition: all 0.2s ease;
+		cursor: default;
+	}
+
+	.verse-pill-icon {
+		font-size: 1.1rem;
 	}
 
 	.data-attribution {
@@ -823,13 +1045,257 @@ const linkedDescription = linkCharacterNames(character.data.description, relatio
 		text-decoration: underline;
 	}
 
+	/* Desktop/Mobile visibility utilities */
+	.desktop-only {
+		display: block;
+	}
+
+	.mobile-only {
+		display: none;
+	}
+
+	/* Mobile References List */
+	.mobile-references-list {
+		margin: 2rem 0;
+		border: 1px solid #e5e5e5;
+		border-radius: 8px;
+		background: white;
+		overflow: hidden;
+	}
+
+	.references-toggle {
+		width: 100%;
+		padding: 1rem 1.5rem;
+		background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+		border: none;
+		border-bottom: 1px solid #e5e5e5;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-family: var(--font-display);
+		transition: background 0.2s;
+	}
+
+	.references-toggle:hover {
+		background: linear-gradient(135deg, #f3f3f3 0%, #fafafa 100%);
+	}
+
+	.references-toggle[aria-expanded="true"] .toggle-icon {
+		transform: rotate(180deg);
+	}
+
+	.toggle-title {
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: var(--color-text);
+	}
+
+	.toggle-count {
+		font-size: 0.9rem;
+		color: var(--color-text-light);
+		margin: 0 auto 0 0.5rem;
+	}
+
+	.toggle-icon {
+		font-size: 0.9rem;
+		color: var(--color-text-light);
+		transition: transform 0.3s ease;
+	}
+
+	.references-content {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease-in-out;
+	}
+
+	.references-content.expanded {
+		max-height: 2000px;
+	}
+
+	/* Book List */
+	.book-list {
+		padding: 0.5rem 0;
+	}
+
+	.book-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.75rem 1.5rem;
+		border-bottom: 1px solid #f5f5f5;
+	}
+
+	.book-item:last-child {
+		border-bottom: none;
+	}
+
+	.book-name {
+		font-weight: 500;
+		color: var(--color-text);
+	}
+
+	.book-count {
+		font-size: 0.9rem;
+		color: var(--color-text-light);
+	}
+
+	/* Chapter List */
+	.chapter-list {
+		padding: 0.5rem 0;
+	}
+
+	.chapter-details {
+		border-bottom: 1px solid #f5f5f5;
+	}
+
+	.chapter-details:last-child {
+		border-bottom: none;
+	}
+
+	.chapter-summary {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.75rem 1.5rem;
+		cursor: pointer;
+		list-style: none;
+		user-select: none;
+	}
+
+	.chapter-summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.chapter-summary::marker {
+		display: none;
+	}
+
+	.chapter-name {
+		font-weight: 500;
+		color: var(--color-text);
+	}
+
+	.chapter-count {
+		font-size: 0.9rem;
+		color: var(--color-text-light);
+	}
+
+	.verse-list {
+		padding: 0.75rem 1.5rem 1rem;
+		background: #fafafa;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.verse-number {
+		display: inline-block;
+		padding: 0.25rem 0.5rem;
+		background: white;
+		border: 1px solid #e5e5e5;
+		border-radius: 4px;
+		font-size: 0.9rem;
+		font-weight: 500;
+		color: var(--color-text);
+	}
+
+	/* Bible-wide histogram scroll on mobile */
+	.bible-histogram-scroll {
+		overflow-x: auto;
+		overflow-y: hidden;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	/* Touch device hints (desktop only) */
+	@media (hover: none) and (min-width: 769px) {
+		.histogram-wrapper::after {
+			content: 'Tap bars for verse details';
+			display: block;
+			text-align: center;
+			font-size: 0.85rem;
+			color: #666;
+			margin-top: 0.5rem;
+			font-style: italic;
+		}
+	}
+
+	@media (hover: hover) and (min-width: 769px) {
+		.histogram-wrapper::after {
+			content: 'Click bars for verse details';
+			display: block;
+			text-align: center;
+			font-size: 0.85rem;
+			color: #666;
+			margin-top: 0.5rem;
+			font-style: italic;
+		}
+	}
+
 	@media (max-width: 768px) {
+		/* Switch to mobile layout */
+		.desktop-only {
+			display: none !important;
+		}
+
+		.mobile-only {
+			display: block;
+		}
+
 		.family-members {
 			flex-direction: column;
 		}
 
 		.family-member {
 			width: 100%;
+		}
+
+		.histogram-container {
+			padding: 1rem;
+		}
+
+		.histogram-wrapper canvas {
+			max-height: 200px;
+		}
+
+		.bible-histogram-scroll canvas {
+			min-width: 600px;
+		}
+
+		.verse-pill {
+			font-size: 0.85rem;
+			padding: 0.4rem 0.8rem;
+		}
+
+		.verse-detail-panel.expanded {
+			padding: 1rem;
+		}
+
+		.references-intro {
+			font-size: 0.95rem;
+		}
+
+		/* Mobile collapsible lists adjustments */
+		.toggle-title {
+			font-size: 1rem;
+		}
+
+		.toggle-count {
+			font-size: 0.85rem;
+		}
+
+		.book-item,
+		.chapter-summary {
+			padding: 0.65rem 1rem;
+		}
+
+		.verse-list {
+			padding: 0.65rem 1rem 0.85rem;
+		}
+
+		.verse-number {
+			font-size: 0.85rem;
+			padding: 0.2rem 0.4rem;
 		}
 	}
 </style>
