@@ -21,6 +21,7 @@ BACKGROUND_CHARS=(
   "jashar.json"          # Book of Jashar, not a person
   "jerusalemwives.json"  # Generic collective, not an individual
   "abigal.json"          # Duplicate of abigail-2.json (spelling variant)
+  "eliam.json"           # Duplicate of eliam-2.json (same person, different verses)
 )
 
 for char in "${BACKGROUND_CHARS[@]}"; do

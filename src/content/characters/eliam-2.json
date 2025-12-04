@@ -1,10 +1,17 @@
 {
   "acaiId": "person:Eliam.2",
   "name": "Eliam",
-  "description": "Eliam, son of Ahithophel and father of Bathsheba, was a warrior during the time of Israel's united kingdom, mentioned in 2 Samuel 23:34.",
+  "description": "Eliam, also known as Ammiel, was the son of Ahithophel and father of Bathsheba. He was one of David's mighty men.",
   "gender": "male",
   "father": "person:Ahithophel",
+  "offspring": [
+    "person:Bathsheba"
+  ],
+  "roles": [
+    "Warrior"
+  ],
   "references": [
+    "10011003",
     "10023034"
   ]
 }
