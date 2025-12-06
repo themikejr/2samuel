@@ -4,7 +4,7 @@
   "description": "An advisor of King David and David's son Absalom. Ahithophel was from Giloh.",
   "gender": "male",
   "offspring": [
-    "person:Eliam.2"
+    "person:Eliam"
   ],
   "roles": [
     "Official",
