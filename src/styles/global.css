@@ -17,6 +17,9 @@ html {
 ::view-transition-old(main-navigation),
 ::view-transition-new(main-navigation) {
   animation: none;
+  mix-blend-mode: normal;
+  opacity: 1;
+  background-color: var(--color-bg);
 }
 
 /* Page content fade transition */
@@ -294,6 +297,7 @@ body::before {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--color-bg);
 }
 
 .nav-stable {
@@ -302,6 +306,7 @@ body::before {
   align-items: center;
   width: 100%;
   padding: 1rem 0;
+  background-color: var(--color-bg);
 }
 
 .nav-dynamic {

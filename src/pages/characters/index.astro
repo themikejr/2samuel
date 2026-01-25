@@ -26,7 +26,7 @@ const characters = (await getCollection('characters')).sort(
 				<article class="character-card" data-name={character.data.name.toLowerCase()}>
 					<a href={`/characters/${character.id}/`}>
 						<div class="character-content">
-							<h3 class="character-name">{character.data.name}</h3>
+							<h3 class="character-name" style={`view-transition-name: character-name-${character.id}`}>{character.data.name}</h3>
 							{character.data.roles && character.data.roles.length > 0 && (
 								<p class="character-roles">{character.data.roles.join(', ')}</p>
 							)}
@@ -58,12 +58,14 @@ const characters = (await getCollection('characters')).sort(
 </Layout>
 
 <script>
-	// Client-side search functionality
-	const searchInput = document.getElementById('character-search') as HTMLInputElement;
-	const charactersGrid = document.getElementById('characters-grid') as HTMLElement;
-	const noResults = document.getElementById('no-results') as HTMLElement;
-	const searchCount = document.getElementById('search-count') as HTMLElement;
-	const characterCards = Array.from(charactersGrid.querySelectorAll('.character-card'));
+	// Wait for view transitions to complete before initializing
+	document.addEventListener('DOMContentLoaded', () => {
+		// Client-side search functionality
+		const searchInput = document.getElementById('character-search') as HTMLInputElement;
+		const charactersGrid = document.getElementById('characters-grid') as HTMLElement;
+		const noResults = document.getElementById('no-results') as HTMLElement;
+		const searchCount = document.getElementById('search-count') as HTMLElement;
+		const characterCards = Array.from(charactersGrid.querySelectorAll('.character-card'));
 
 	// Calculate relevance score for ranking
 	function getRelevanceScore(name: string, searchTerm: string): number {
@@ -158,18 +160,19 @@ const characters = (await getCollection('characters')).sort(
 		}
 	}
 
-	searchInput.addEventListener('input', () => filterCharacters(true));
+		searchInput.addEventListener('input', () => filterCharacters(true));
 
-	// Clear search on Escape key
-	searchInput.addEventListener('keydown', (e) => {
-		if (e.key === 'Escape') {
-			searchInput.value = '';
-			filterCharacters(true);
-		}
+		// Clear search on Escape key
+		searchInput.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') {
+				searchInput.value = '';
+				filterCharacters(true);
+			}
+		});
+
+		// Initialize on page load
+		initializeFromURL();
 	});
-
-	// Initialize on page load
-	initializeFromURL();
 </script>
 
 <style>

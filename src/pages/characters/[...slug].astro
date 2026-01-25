@@ -143,7 +143,7 @@ siblings.forEach((s) => relationshipContext.set(s.data.acaiId, s));
 const linkedDescription = linkCharacterNames(character.data.description, relationshipContext);
 ---
 
-<Layout title={character.data.name}>
+<Layout title={character.data.name} characterId={character.id}>
 	<meta slot="head" name="book-references" content={JSON.stringify(referencesByBook)} />
 	<article class="character-detail">
 		<div class="character-header">

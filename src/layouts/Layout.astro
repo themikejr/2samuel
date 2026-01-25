@@ -8,9 +8,10 @@ export interface Props {
   subtitle?: string;
   showFooter?: boolean;
   postId?: string;
+  characterId?: string;
 }
 
-const { title = "2 Samuel Study Group", subtitle, showFooter = true, postId } = Astro.props;
+const { title = "2 Samuel Study Group", subtitle, showFooter = true, postId, characterId } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -70,7 +71,15 @@ const { title = "2 Samuel Study Group", subtitle, showFooter = true, postId } = 
 
       <!-- Main Content Column -->
       <main class="main-content">
-        {title && title !== "2 Samuel Study Group" && <h1 style={`view-transition-name: ${postId ? `post-title-${postId}` : 'page-title'}`}>{title}</h1>}
+        {title && title !== "2 Samuel Study Group" && (
+          postId ? (
+            <h1 style={`view-transition-name: post-title-${postId}`}>{title}</h1>
+          ) : characterId ? (
+            <h1 style={`view-transition-name: character-name-${characterId}`}>{title}</h1>
+          ) : (
+            <h1>{title}</h1>
+          )
+        )}
         {subtitle && <p class="subtitle">{subtitle}</p>}
         <slot />
       </main>
